@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		/* reset */
+ 		*{margin: 0; padding: 0;}
+ 		li{list-style:none;}
+ 		a:visited, a:link{text-decoration: none; color: black;}
+ 		.clearfix:after{content:""; display: block; clear: both;}
+ 		/* reset end */
+
+ 		body{background-repeat: no-repeat; background-image: url(../images/testimg02.jpg); background-size: cover; background-attachment: fixed;}
+
+ 		/* headerstart */
+		#header{width: 1000px;  margin: 0 auto; margin-bottom: 20px; padding-top: 20px;}
+
+		#header>h1{width: 300px; margin: 0 auto; line-height: center; text-align: center; padding-bottom: 20px; font-size: 40px;}
+
+		#header>.gnb{width: 100%;}
+
+		#header>.gnb>ul{}
+		/* #header>.gnb>ul:after{content:""; display: block; clear: both;} */
+		#header>.gnb>ul>li{width: 166.67px; float: left; }
+		#header>.gnb>ul>li>a{ color: #000; text-align: center; display: block; line-height: 40px; height: 40px; font-weight: bold;}
+		#header>.gnb>ul>li>a:hover{background-color: #000; color:white;}
+		/* header end */
+
+		.visual{height: 400px; background-color: #fff; margin-bottom: 50px; background-image: url(../images/testimg03.jpg); background-size: cover;}
+
+
+		.container{width:1000px; margin: 0 auto; padding: 10px 0 30px; margin-bottom: 50px;}
+		.container>ul{width: 100%; }
+		/* .container>ul:after{content:""; display: block; clear:both;} */
+		.container>ul>li{width:242.5px; float:left; margin-right: 10px; }
+		.container>ul>li:last-child{margin-right: 0;}
+		.container>ul>li>img{width: 100%; display:inline-block; }
+
+		.container>h3{margin: 20px auto ; color:white; text-align: center;}
+
+		.content{}
+		.content>p{width: 1000px; margin: 0 auto; display: block; text-align: center; background-color: #fff; }
+
+		.skyblue{background-color: skyblue;}
+
+
+		#footer{height: 200px; background-color: #222;}
+
+
+	</style>
+</head>
+
+<body>
+	<!-- header -->
+	<div id="header">
+		<h1>DDUGGURI</h1>
+		<nav class="gnb">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<li><a href="#">menu6</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- header end -->
+
+	<div class="visual"></div>
+
+	<div. class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, asperiores earum veritatis nostrum sit repudiandae sequi, perferendis expedita odio reiciendis modi saepe magnam, fugit nihil? Repellat ad, iusto rerum, vitae nihil repudiandae similique maiores! Perferendis libero est, repellat labore, inventore temporibus adipisci similique repudiandae repellendus soluta animi. Necessitatibus repudiandae excepturi quos voluptates harum vitae sed repellendus dicta vero, commodi nobis porro iusto voluptatum magni nesciunt assumenda explicabo error magnam, voluptas similique. Maiores, aliquam, veritatis. Sunt voluptatem nobis amet iure voluptate. Cum et accusantium, tempore explicabo dicta illo soluta ipsum, maxime eius veniam ea debitis odio aliquam recusandae, animi sequi ratione.</p>
+	</div>
+
+
+	<div class="container">
+		<h3>PARIS</h3>
+		<ul class="clearfix">
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div class="conWrap skyblue">
+		<div class="container">
+			<h3>REPORT</h3>
+			<ul class="clearfix">
+				<li><img src="../images/testimg01.jpg" alt=""></li>
+				<li><img src="../images/testimg01.jpg" alt=""></li>
+				<li><img src="../images/testimg01.jpg" alt=""></li>
+				<li><img src="../images/testimg01.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<h3>NOTICE</h3>
+		<ul class="clearfix">
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+			<li><img src="../images/testimg01.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div id="footer">
+		
+
+	</div>
+</body>
+</html>

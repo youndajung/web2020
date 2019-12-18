@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta charset="UTF-8">
+  <title>float</title>
+  <style>
+    div.wrap{
+      width: 500px; 
+      background-color: skyblue;
+    }
+    
+    div.left, div.right{
+      width: 100px; height: 200px; float:left;
+    }
+    
+    div.left{background-color: red;}
+    div.right{background-color: blue;}
+    
+  
+    
+    div.clear{ clear:both;  }
+  </style>
+  
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="left">view01</div>
+    <div class="right">view02</div>
+    
+    <div class="clear">뀨</div>
+  </div>
+  
+</body>
+</html>
