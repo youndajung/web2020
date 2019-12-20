@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{background-image: url(../images/testimg03.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center;}
+		/* header */
+		#header{width: 1000px; height: 150px; margin: 0 auto; position: relative;}
+		#header>h1{width: 100px; position: absolute; top: 10px; left: 50%; margin-left: -50px; text-align: center; }
+
+		#header>div.utilmenu1{width: 200px; height: 40px;  position: absolute; left: 10px; top: 10px;}
+		#header>div.utilmenu2{width: 200px; height: 40px;  position: absolute; right: 10px; top: 10px;}
+
+		#header>nav.navWrap{;position: absolute; bottom: 0; width: 100%; margin-bottom: 20px;}
+		#header>nav.navWrap>ul{}
+		#header>nav.navWrap>ul>li{
+			box-sizing: border-box;
+			float:left; width: 200px; height: 40px; border-right: 1px solid #000;}
+/* 		#header>nav.navWrap>ul>li:last-child{border-right: none;}
+		 */		
+		 #header>nav.navWrap>ul>li:first-child{border-left:1px solid #000;}
+		 #header>nav.navWrap>ul>li>a{display: block; height: 40px; text-align: center; line-height: 40px;  font-size: 20px; color: #000;}
+		#header>nav.navWrap>ul>li>a:hover{background-color: orange; font-weight: bold; color:#000;}
+
+
+		/*slider*/
+		.slider>div{height: 800px;}
+		.slider img{ width: 100%;}
+
+		.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 100px #000;
+    border: 0px solid #000;
+    background: #fff;
+}
+
+		/* content */
+		.content{ width: 100%; height: 2800px; margin: 0 auto; position: relative;  }
+
+		.content>h3{margin: 0 auto; text-align: center; font-size: 30px;}
+
+		/* content1 */
+		.content>.content1{position: absolute; width: 800px; height: 600px; left: 50px; top: 50px;}
+		.content>.content1 img{width: 100%; height: 100%;}
+		.content>.content1 strong{ position: absolute; left: 400px; font-size: 120px; color:#000;}
+		.content>.content1 b{color:orange;}
+
+		/* content2 */
+		.content>.content2{position: absolute; width: 800px; height: 600px; right: 50px; top: 700px;}
+		.content>.content2 img{width: 100%; height: 100%;}
+		.content>.content2 strong{ position: absolute; right: 400px; font-size: 120px; color:#000;}
+		.content>.content2 b{color:orange;}
+
+		/* content3 */
+		.content>.content3{position: absolute; width: 800px; height: 600px; left: 50px; top: 1350px;}
+		.content>.content3 img{width: 100%; height: 100%;}
+		.content>.content3 strong{ position: absolute; left: 400px; font-size: 120px; color:#000;}
+		.content>.content3 b{color:orange;}
+
+		/* content4 */
+		.content>.content4{position: absolute; width: 800px; height: 600px; right: 50px; top: 2000px; }
+		.content>.content4 img{width: 100%; height: 100%;}
+		.content>.content4 strong{ position: absolute; right: 400px; font-size: 120px; color:#000;}
+		.content>.content4 b{color:orange;}
+
+
+
+	</style>
+
+	<script>
+		$(document).ready(function(){
+  $(".slider").bxSlider({
+    mode: 'fade',
+    captions: true,
+    slideWidth: 1920
+  });
+});
+	</script>
+
+
+</head>
+<body>
+	<div id="header">
+		<h1>LOGO</h1>
+		<DIV class="utilmenu1">UTILMENU1</DIV>	
+		<DIV class="utilmenu2">UTILMENU2</DIV>	
+		<nav class="navWrap">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	
+	<div class="slider">
+			<div><img src="../images/recordmain01.jpg" alt=""></div>
+			<div><img src="../images/recordmain02.jpg" alt=""></div>
+			<div><img src="../images/recordmain03.jpg" alt=""></div>
+			<div><img src="../images/recordmain04.jpg" alt=""></div>
+	</div>
+
+	<div class="content">
+		<h3>NEW ARTWORK</h3>
+
+		<div class="content1">
+			<img src="../images/record01.jpg" alt="">
+			<strong><b>C</b>ONTENT1</strong>
+		</div>
+
+		<div class="content2">
+			<img src="../images/record02.jpg" alt="">
+			<strong><b>C</b>ONTENT2</strong>
+		</div>
+
+		<div class="content3">
+			<img src="../images/record03.jpg" alt="">
+			<strong><b>C</b>ONTENT3</strong>
+		</div>
+
+		<div class="content4">
+			<img src="../images/record04.jpg" alt="">
+			<strong><b>C</b>ONTENT4</strong>
+		</div>
+		
+	</div>
+	
+
+</body>
+</html>

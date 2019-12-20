@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<link rel="stylesheet" href="../20191219_position./css/reset.css">
+	<link rel="stylesheet" href="../20191219_position./css/style.css">
+	<style>
+		div.box1,
+		div.box2, 
+		div.box3, 
+		div.box4,
+		div.box5{
+			width: 200px; height: 200px; position:absolute; }
+
+		div.box1{top: 0; left: 0%; background-color: skyblue; width: 400px; z-index: 1 }
+
+		div.box1:after{content:"입니다";}
+
+		div.box2{right: 0%; top: 0%; background-color: #f00; ; height: 400px;}
+
+		div.box2:after{content:"일까";}
+
+		div.box3{bottom: 0%; left: 50%; background-color: #ff0; margin-left: -100px; width: 400px;}
+
+		div.box3:after{content:"이지롱";}
+
+		div.box4{left: 0%; top: 50%; background-color: #00f; margin-top: -100px; height: 400px;}
+
+		div.box4:after{content: "일수도"}
+
+		div.box5{left: 50%; top: 50%; margin-top: -100px; margin-left: -100px; background-color: #fff;}
+
+		div.boxWrap{position: relative; width: 600px; height: 600px; background-color: #333; margin: 0 auto;}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+	</div>
+</body>
+</html>
