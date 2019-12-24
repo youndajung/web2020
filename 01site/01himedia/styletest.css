@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		a:visited, a:link{text-decoration: none; color:#000;}
+		.clearfix:after{content:""; display: block; clear: both;}
+		/* style.css end */
+
+		/* header start */
+		header#main_header{background-color: skyblue;}
+		header#main_header>div.main_util{border-bottom: : 1px solid #ccc;}
+		header#main_header>div.main_util>nav.util_menu{width: 980px; background-color: red; margin: 0 auto;}
+		nav.util_menu>ul{width: 300px; background-color: pink; float: right;}
+		nav.util_menu>ul>li{float: left; position: relative;}
+		nav.util_menu>ul>li>a{display: block; text-align: center; padding: 0 15px; line-height: 30px;}
+		nav.util_menu>ul>li:after{ content:""; display: block; width: 1px; height: 10px;  background-color: #ccc; position: absolute; top: 10px; }
+		nav.util_menu>ul>li:first-child:after{content:""; display: none;}
+
+		
+
+
+		/* header end */
+
+		
