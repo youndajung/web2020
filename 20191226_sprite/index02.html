@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>졸립니다쌤</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		div.header{
+			width: 980px; margin: 0 auto; 
+		}
+		div.header>nav.nav{
+			 background-color: #f0f0f1; margin: 0 auto;
+			}
+		div.header>nav.nav>ul{}
+		div.header>nav.nav>ul>li{background-image: url(../images/sprites.png);
+			float: left; width: 140px; height: 50px; overflow:hidden; } 
+		div.header>nav.nav>ul>li>a{display: block; height: 50px; text-indent: -9999px;}
+
+		div.header>nav.nav>ul>li:nth-child(1){
+			_width: 140px; _height: 50px; background-position: 0 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(2){
+			_width: 140px; _height: 50px; background-position: -140px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(3){
+		background-position: -280px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(4){
+		background-position: -420px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(5){
+		background-position: -560px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(6){
+		 background-position: -700px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(7){
+		background-position: -840px 0;	
+		}
+		div.header>nav.nav>ul>li:nth-child(1):hover{background-position: 0 50px;}
+		div.header>nav.nav>ul>li:nth-child(2):hover{background-position: -140px 50px;}
+		div.header>nav.nav>ul>li:nth-child(3):hover{background-position: -280px 50px;}
+		div.header>nav.nav>ul>li:nth-child(4):hover{background-position: -420px 50px;}
+		div.header>nav.nav>ul>li:nth-child(5):hover{background-position: -560px 50px;}
+		div.header>nav.nav>ul>li:nth-child(6):hover{background-position: -700px 50px;}
+		div.header>nav.nav>ul>li:nth-child(7):hover{background-position: -840px 50px;}
+
+		div.header>nav.nav>ul>li:nth-child(1).active{background-position: 0 50px;}
+		div.header>nav.nav>ul>li:nth-child(2).active{background-position: -140px 50px;}
+		div.header>nav.nav>ul>li:nth-child(3).active{background-position: -280px 50px;}
+		div.header>nav.nav>ul>li:nth-child(4).active{background-position: -420px 50px;}
+		div.header>nav.nav>ul>li:nth-child(5).active{background-position: -560px 50px;}
+		div.header>nav.nav>ul>li:nth-child(6).active{background-position: -700px 50px;}
+		div.header>nav.nav>ul>li:nth-child(7).active{background-position: -840px 50px;}
+
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<nav class="nav">
+			<ul class="clearfix">
+				<li><a href="#">지역</a></li>
+				<li ><a href="#">쇼핑</a></li>
+				<li class="active"><a href="#">문화</a></li>
+				<li><a href="#">여행</a></li>
+				<li><a href="#">레저</a></li>
+				<li><a href="#">추천</a></li>
+				<li><a href="#">전체보기</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
