@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	
+	<style>
+		.sliderWrap{width: 1000px; margin: 0 auto;}
+
+		.bx-wrapper {
+		    -moz-box-shadow:0 none;
+		    -webkit-box-shadow: 0 none;
+		    box-shadow:  0 none;
+		    border:  0 none;
+		    margin-bottom: 0;
+		}
+		.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+		    position: absolute;
+		    bottom: 30px;
+		    width: 100%;
+		}
+	</style>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+
+	<script>
+		function dLink(){
+			location.href ="http://www.naver.com"
+		}
+	</script>
+</head>
+<body>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt="pc01"></li>
+			<li><img src="images/pc02.jpg" alt="pc02"></li>
+			<li><img src="images/pc03.jpg" alt="pc03"></li>
+		</ul>
+	</div>
+
+	<div style="width: 1000px; height: 200px; background-color: black; margin: 0 auto;" onclick="dLink();">
+		
+	</div>
+	
+</body>
+</html>
+

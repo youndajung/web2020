@@ -3,7 +3,7 @@
 #header{}
 #header>div.header_line{border-bottom: 1px solid #000;}
 #header>div.header_line>nav.header_top{width: 980px; background-color: pink; margin: 0 auto;}
-#header>div.header_line>nav.header_top>ul{background-color: red; float: right;}
+#header>div.header_line>nav.header_top>ul{background-color: red; float: right; height: 30px;}
 #header>div.header_line>nav.header_top>ul>li{float: left;}
 
 #header>div.header_mid{width: 980px; margin: 0 auto; padding: 10px 0; background-color: #ff0; position: relative;}
@@ -23,5 +23,10 @@
 #visual>div.visual_main img:first-child{position: absolute; right: 0;}
 #visual>div.visual_main img:last-child{position: absolute; left: 0; top:80px;}
 
-
+#container{background-color: pink;}
+#container>div.container_main{}
+#container>div.container_main>ul{}
+#container>div.container_main>ul>li{}
+#container>div.container_main>ul>li>div.icon{}
+#container>div.container_main>ul>li>div.icontext{}
 

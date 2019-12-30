@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+	<style>
+		/* ul.slider li img{width: 100%;} */
+		.sliderWrap{width: 1000px; margin: 0 auto; position: relative;}
+		.bx-wrapper {
+	    	-moz-box-shadow:0 none;
+	    	-webkit-box-shadow: 0 none;
+	    	box-shadow: 0 none;
+	    	border: 0 none;
+	    	margin-bottom: 0;
+	    	
+			}
+		.bx-wrapper .bx-pager{
+	    position: absolute;
+	    bottom: 30px;
+	    width: 100%;
+		}
+			
+		.nextBtn,.prevBtn{position: absolute; top: 50%; margin-top: -50px; cursor:pointer;}
+		.nextBtn{right: 0;}
+
+		.sliderOneWrap{width: 1000px; margin: 0 auto;}
+
+	</style>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*var han = 값; *//*var:한이라는변수를선언한다*/
+
+			var mySlide = $(".slider").bxSlider({
+				auto:true,
+				controls:false,
+				pager:false
+			});
+
+			$(".nextBtn").click(function(){
+				mySlide.goToNextSlide()
+			});
+
+			$(".prevBtn").click(function(){
+				mySlide.goToPrevSlide()
+			});
+
+			$(".sliderOne").bxSlider();
+		});
+	</script>
+
+	<script>
+		function dLink(){
+			location.href="http://www.naver.com"
+		}
+	</script>
+</head>
+
+<body>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt="img01"></li>
+			<li><img src="images/pc02.jpg" alt="img02"></li>
+			<li><img src="images/pc03.jpg" alt="img03"></li>
+		</ul>
+		<div class="nextBtn">
+			<img src="images/btnright.png" alt="오른쪽">
+		</div>
+		<div class="prevBtn">
+			<img src="images/btnleft.png" alt="왼쪽">
+		</div>
+	</div>
+
+	<div style="height: 200px; background-color: red;" onclick="dLink();">
+	</div>
+
+	<div class="sliderOneWrap">
+		<ul class="sliderOne">
+				<li><img src="images/pc01.jpg" alt="img01"></li>
+				<li><img src="images/pc02.jpg" alt="img02"></li>
+				<li><img src="images/pc03.jpg" alt="img03"></li>
+		</ul>
+	</div>
+</body>
+</html>
+
