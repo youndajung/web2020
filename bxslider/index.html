@@ -27,7 +27,19 @@
 		.nextBtn,.prevBtn{position: absolute; top: 50%; margin-top: -50px; cursor:pointer;}
 		.nextBtn{right: 0;}
 
-		.sliderOneWrap{width: 1000px; margin: 0 auto;}
+		.sliderOneWrap{width: 1000px; margin: 0 auto; height: 400px; overflow: hidden; }
+		.sliderOneWrap ul.sliderOne{ width: 100%; margin: 0 auto; }
+		.sliderOneWrap ul.sliderOne li{
+			height: 400px;
+			background-image: url(images/osulloc01.jpg);
+			background-position: : center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.slider01{width: 1000px; margin: 0 auto; position: relative;}
+		.sliderBtn{position: absolute; bottom: 20px; width: 100%; }
+		.sliderBtn a{display: block; float:left; width: 25%; background-color: skyblue; text-align: center; line-height: 30px;}
+		.sliderBtn a.active{background-color: black; color: #fff;}
 
 	</style>
 
@@ -40,7 +52,7 @@
 			var mySlide = $(".slider").bxSlider({
 				auto:true,
 				controls:false,
-				pager:false
+				pagerCustom:".sliderBtn"
 			});
 
 			$(".nextBtn").click(function(){
@@ -63,28 +75,39 @@
 </head>
 
 <body>
-	<div class="sliderWrap">
-		<ul class="slider">
-			<li><img src="images/pc01.jpg" alt="img01"></li>
-			<li><img src="images/pc02.jpg" alt="img02"></li>
-			<li><img src="images/pc03.jpg" alt="img03"></li>
-		</ul>
-		<div class="nextBtn">
-			<img src="images/btnright.png" alt="오른쪽">
+	<div class="slider01">
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li><img src="images/pc01.jpg" alt="img01"></li>
+				<li><img src="images/pc02.jpg" alt="img02"></li>
+				<li><img src="images/pc03.jpg" alt="img03"></li>
+				<li><img src="images/pc01.jpg" alt="img01"></li>
+			</ul>
+			<div class="nextBtn">
+				<img src="images/btnright.png" alt="오른쪽">
+			</div>
+			<div class="prevBtn">
+				<img src="images/btnleft.png" alt="왼쪽">
+			</div>
 		</div>
-		<div class="prevBtn">
-			<img src="images/btnleft.png" alt="왼쪽">
+		
+		<div class="sliderBtn clearfix">
+			<a href="#" data-slide-index="0">menu1</a>
+			<a href="#" data-slide-index="1">menu2</a>
+			<a href="#" data-slide-index="2">menu3</a>
+			<a href="#" data-slide-index="3">menu4</a>
 		</div>
 	</div>
+
 
 	<div style="height: 200px; background-color: red;" onclick="dLink();">
 	</div>
 
 	<div class="sliderOneWrap">
 		<ul class="sliderOne">
-				<li><img src="images/pc01.jpg" alt="img01"></li>
-				<li><img src="images/pc02.jpg" alt="img02"></li>
-				<li><img src="images/pc03.jpg" alt="img03"></li>
+				<li></li>
+				<li></li>
+				<li></li>
 		</ul>
 	</div>
 </body>

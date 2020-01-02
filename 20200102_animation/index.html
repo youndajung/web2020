@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		div.box0{
+		width:200px; height: 200px;
+		position: relative;
+		background-color: skyblue;
+		animation-name:myani; /* 이름 */
+		animation-duration:3s; /* 작동시간 */
+		animation-iteration-count:infinite; /* 반복여부:영구적; */
+		animation-direction:alternate; /* 방향:거꾸로되돌아가기 */
+		_animation-fill-mode:forwards; /* 종료시점위치:forwards:마지막위치/none:사라짐; */
+		animation-delay:2s; /* 지연시간 */
+		animation-timing-function:linear; 
+		}
+		@keyframes myani{
+			from{top: 0; width: 200px; height: 200px; background-color: skyblue; left: 0;}
+			25%{left: 300px;}
+			50%{left: 200px;}
+			100%{top: 500px; width: 500px; height: 500px; background-color: yellow; left: 0;}
+		}
+
+
+
+
+			div.boxWrap{
+				width: 600px; height: 600px;
+				background-color: #ddd;
+				position: relative;
+			}
+			div.boxWrap>div.box01{
+				position: absolute;
+				top: 50px; left: 50px;
+				height: 10px;
+				background-color: #fff;
+				animation-name:box1;
+				animation-duration:1s;
+				animation-fill-mode:forwards;
+				_animation-timing-function:ease-in;
+			}
+			@keyframes box1{
+				from{width: 0px; background-color: #fff;}
+				to{width: 550px; background-color: #f00;}
+			}
+			div.boxWrap>div.box02{
+				position: absolute;
+				top: 50px; right: 50px;
+				width: 10px;
+				background-color: #f00;
+				animation-name:box2;
+				animation-duration:1s;
+				animation-delay:0.9s;
+				animation-fill-mode:forwards;
+				_animation-timing-function:ease-in;
+			}
+			@keyframes box2{
+				from{height: 0px; background-color: #f00;}
+				to{height: 550px; background-color: #0f0;}
+			}
+			div.boxWrap>div.box03{
+				position: absolute;
+				bottom: 50px; right: 50px;
+				height: 10px;
+				background-color: #666;
+				animation-name:box3;
+				animation-duration:1s;
+				animation-delay:1.9s;
+				animation-fill-mode:forwards;
+				_animation-timing-function:ease-in;
+			}
+			@keyframes box3{
+				from{width: 10px; background-color: #0f0;}
+				to{width: 550px; background-color: #00f;}
+			}
+			div.boxWrap>div.box04{
+				position: absolute;
+				bottom: 50px; left: 50px;
+				width: 10px;
+				background-color: #333;
+				animation-name:box4;
+				animation-duration:1s;
+				animation-delay:2.9s;
+				animation-fill-mode:forwards;
+				_animation-timing-function:ease-in;
+			}
+			@keyframes box4{
+				from{height: 10px; background-color: #00f;}
+				to{height: 550px; background-color: #ff0;}
+			}
+
+		
+	</style>
+</head>
+
+<body>
+	<!-- <div class="box0">animation</div> -->
+	<div class="boxWrap">
+		<div class="box01"></div>
+		<div class="box02"></div>
+		<div class="box03"></div>
+		<div class="box04"></div>
+	</div>
+</body>
+</html>
