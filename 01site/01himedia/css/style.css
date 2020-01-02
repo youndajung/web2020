@@ -89,7 +89,7 @@ article#container li div.cardbody{padding: 15px; border: 1px solid #ccc; border-
 article#container img{display: block;}
 /* article end */
 
-article#containerOne{width: 980px; margin: 0 auto;}
+article#containerOne{width: 980px; margin: 0 auto; margin-bottom: 30px;}
 article#containerOne li{
 	float: left; width: 310px; height: 165px; margin-right: 25px; border: 1px solid #ccc;
 	position: relative; overflow: hidden;
@@ -100,5 +100,27 @@ article#containerOne img{display: block; position: absolute; right: 10px; top: 1
 article#containerOne li div.cardbody h3{margin-bottom: 10px;}
 article#containerOne li div.cardbody p{margin-bottom: 10px;}
 article#containerOne li div.cardbody a{color: #4b8ddd; font-size:0.8em;}
+
+
+footer#main_footer{height: 150px; background-color: #5e5e5e;}
+footer#main_footer>div.footerWrap{height: 43px; background-color: #4d4d4d;}
+footer#main_footer>div.footerWrap>div.footer{width: 980px; margin: 0 auto;}
+footer#main_footer>div.footerWrap>div.footer ul li{float: left; position: relative;}
+footer#main_footer>div.footerWrap>div.footer ul li a{
+	display: block; padding: 0 30px; font-size:0.8em; line-height: 43px;
+	color: #cdcdcd; font-weight: bold;
+}
+footer#main_footer>div.footerWrap>div.footer ul{overflow: hidden;}
+footer#main_footer>div.footerWrap>div.footer ul li:first-child a{padding-left: 0;}
+footer#main_footer>div.footerWrap>div.footer ul li:after{
+	content:""; display: block;
+	width: 1px; height: 15px; background-color: #717171;
+	position: absolute; top: 15px; left: -1px;
+}
+footer#main_footer div.footerAdd{width: 980px; margin: 0 auto;}
+footer#main_footer div.footerAdd h2{float: left; color:#fff; padding-top: 10px; margin-right: 20px;}
+footer#main_footer div.footerAdd address{float: left; font-style:normal; color: #cdcdcd; padding-top: 10px;}
+
+
 
 
