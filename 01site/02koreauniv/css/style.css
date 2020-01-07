@@ -168,27 +168,105 @@ div.textWrap05 div.contents03 ul{float: right;}
 div.textWrap05 div.contents03 ul li{float: left; margin-top: 10px; margin-right: 5px;}
 /* 컨테이너5끝 */
 /* 컨테이너6시작 */
-.textWrap06{ height: 225px; position: relative;}
-.textWrap06 a{
+div.textWrap06{ height: 225px; position: relative; color:#fff;}
+div.textWrap06 a{
 	position: absolute; bottom: 0;
-	width: 300px; line-height: 50px; background-color:rgba(0,0,0,0.6);
-	text-align: center; font-size: 22px; font-weight: bold;
+	width: 300px; line-height: 50px;
+	background-color:rgba(0,0,0,0.8);
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
 	color:#fff;
 }
 /* 컨테이너6끝 */
+/* 컨테이너7시작 */
+div.textWrap07{height: 225px; position: relative;}
+div.textWrap07 a{
+	display: block;
+	position: absolute; top: 50%; margin-top: -30px; left: 50%; margin-left: -30px;}
+
+/* 컨테이너7끝 */
+/* 컨테이너8시작 */
+ul.middle>li:nth-child(8){
+	width: 75%; height: 225px;
+	overflow: hidden;
+	position: relative;
+}
+ul.middle>li ul.slider08{}
+ul.middle>li ul.silder08 li{}
+ul.middle>li img.student{
+	position: absolute;
+	top: -30px; right: 100px;
+}
+ul.middle>li div.textWrap08{
+	position: absolute; top: 30px;left: 30px;
+}
+ul.middle>li div.textWrap08 p{
+	font-size: 30px; color:#fd503f; font-weight: bold;
+}
+ul.middle>li div.textWrap08 strong{
+	font-size: 60px; color:#fd503f; font-weight: bold;
+}
+ul.middle>li div.textWrap08 a{
+	display: block;
+	margin-top: 20px;
+	width: 200px;
+	line-height: 40px;
+	background-color: rgba(254,59,40,0.9);
+	text-align: center;
+	color:#fff;
+	border: 1px solid #fff;
+}
+/* 컨테이너8끝 */
+
+.containerBtm{width: 1200px; margin: 20px auto;}
+.containerBtm ul{}
+.containerBtm ul li{float: left; height: 60px; background-color: #fff;}
+.containerBtm ul>li:first-child{width: 25%;}
+.containerBtm ul>li:last-child{width: 75%;}
+.containerBtm ul li .slider02Wrap{}
 
 
 
+/* .container02{width: 1200px; margin: 0 auto; margin-top: 20px;} */
+/* ul.btn{_margin-bottom: 30px;}
+.btn>li{
+	position: relative;
+	width: 25%;
+	height: 60px;
+	background-color: #fff;
+	float: left;
+
+}
+.btn>li.box01{
+	padding: 0 40px;
+	border-right: 2px solid #6b6b6b;
+}
+.btn>li.box01 ul{}
+.btn>li.box01 ul li{
+	float: left; line-height: 60px;
+	font-size: 18px;
+	color: #00163d;
+	font-weight: bold;
+}
+.btn>li.box01 ul li:first-child{margin-right: 50px;}
 
 
-
-
-
-
-
-
-
-
+.btn>li.box02{
+	width: 75%; _padding: 0 30px;
+	position: relative;
+}
+.btn>li.box02 ul{padding: 0 40px;}
+.btn>li.box02 ul li{
+	float: left;
+	font-size: 14px;
+	line-height: 60px;
+	margin-right: 40px;
+}
+.btn>li.box02>ul>li>a{display: block;}
+.btn>li.box02>ul>li>a>img{display: block;}
+.btn>li.box02>div.btnWrap>a:first-child{position: absolute; top: 0; right: 0;}
+.btn>li.box02>div.btnWrap>a:last-child{position: absolute; bottom: 0; right: 0;} */
 
 
 

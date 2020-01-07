@@ -63,7 +63,7 @@
 			<div class="container_top clearfix">
 				<p>함께 나누며 세상을 이끌어<br>
 					<strong>세계로향하는 한국대학교</strong></p>
-			 	<ul clearfix>
+			 	<ul class="clearfix">
 			 		<li><a href="#"><img src="images/icon01.png" alt="입학절차"></a></li>
 			 		<li><a href="#"><img src="images/icon02.png" alt="입학설명회"></a></li>
 			 		<li><a href="#"><img src="images/icon03.png" alt="장학제도"></a></li>
@@ -164,8 +164,117 @@
 						</div>
 					</li>
 					<!-- 컨테이너6끝 -->
+					<!-- 컨테이너7시작 -->
+					<li>
 
+						<div class="textWrap07">
+							<img src="images/bg05.jpg" alt="">
+							<a href="#"><img src="images/play01.png" alt=""
+							></a>
+						</div>
+					</li>
+					<!-- 컨테이너7끝 -->
+					<!-- 컨테이너8시작 -->
+					<li>
+						<ul class="slider08">
+							<li>
+								<img src="images/bg06.jpg" alt="">
+								<img class="student" src="images/student01.png" alt="">
+								<div class="textWrap08">
+									<p>2019년 신ㆍ편입생 1차모집</p>
+									<strong>2019.7.1~7.10</strong>
+									<a href="#">입학사전예약  ▶</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/bg06.jpg" alt="">
+								<img class="student" src="images/student01.png" alt="">
+								<div class="textWrap08">
+									<p>2019년 신ㆍ편입생 1차모집</p>
+									<strong>2019.7.1~7.10</strong>
+									<a href="#">입학사전예약  ▶</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/bg06.jpg" alt="">
+								<img class="student" src="images/student01.png" alt="">
+								<div class="textWrap08">
+									<p>2019년 신ㆍ편입생 1차모집</p>
+									<strong>2019.7.1~7.10</strong>
+									<a href="#">입학사전예약  ▶</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/bg06.jpg" alt="">
+								<img class="student" src="images/student01.png" alt="">
+								<div class="textWrap08">
+									<p>2019년 신ㆍ편입생 1차모집</p>
+									<strong>2019.7.1~7.10</strong>
+									<a href="#">입학사전예약  ▶</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 컨테이너8끝 -->
 				</ul>
+
+		</div>
+
+		<div class="containerBtm">
+			<ul class="clearfix">
+				<li>
+					<div class="slider02Wrap">
+						<p>학사일정</p>
+						<ul class="slider02">
+							<li><p>< 2010.7 ></p></li>
+							<li><p>< 2010.6 ></p></li>
+							<li><p>< 2010.5 ></p></li>
+							<li><p>< 2010.7 ></p></li>
+							<li><p>< 2010.7 ></p></li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<div class="slider03Wrap">
+						<ul class="slider03">
+							<li>
+								<p>2019 1학기 성적 열람 및 상담신청</p>
+							</li>
+							<li>
+								<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+			
+			
+			
+						<!-- <li class="box01">
+							<ul class="clearfix">
+								<li>학사일정</li>
+								<li>< 2010.7 ></li>
+							</ul>
+						</li>
+						<li class="box02">
+							<ul class="slider02 clearfix">
+								<li>2019 1학기 성적 열람 및 상담신청</li>
+								<li>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</li>
+							</ul>
+									
+							<div class="btnWrap">
+								<div class="upBtn">
+									<a href="#"><img src="images/up.jpg" alt=""></a>
+								</div>
+								<div class="downBtn">
+									<a href="#"><img src="images/down.jpg" alt=""></a>
+								</div>
+							</div>
+							
+						</li> -->
+			
 		</div>
 	</div>
 
@@ -175,6 +284,37 @@
 		$(document).ready(function(){
 			var mySlide = $(".slider01").bxSlider();
 		});
+		$(document).ready(function(){
+			var mySlide02 = $(".slider08").bxSlider();
+		});
+		/*$(document).ready(function(){
+			var mySlide03 = $(".slider02").bxSlider();
+		});
+
+		var mySlide03 =$(".slider02").bxSlider({
+			auto:true,
+			controls:false,
+			pagerCustom:".slider02"
+
+		})*/
+
 	</script>
+
+
+	var mySlide = $(".slider").bxSlider({
+				auto:true,
+				controls:false,
+				pagerCustom:".sliderBtn"
+			});
+
+			$(".nextBtn").click(function(){
+				mySlide.goToNextSlide()
+			});
+
+			$(".prevBtn").click(function(){
+				mySlide.goToPrevSlide()
+			});
+
+			$(".sliderOne").bxSlider();
 </body>
 </html>
