@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+#header{}
+#header div.topWrap{
+background-image: url(../images/headerbg01.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+height: 90px;
+_position: relative;
+}
+#header div.top{
+	position: relative;
+	width: 980px;
+	height: 90px;
+	margin: 0 auto;
+}
+#header div.top>h1{
+	width: 150px;
+	background-color: #f00;
+	text-align: center;
+	line-height: 90px;
+}
+#header div.top>div.search{
+	width: 290px;
+	height: 30px;
+	background-color: #fff;
+	border-radius: 40px;
+	padding: 5px 20px;
+	position: absolute; 
+	top: 50%; margin-top: -15px;
+	right: 50%; margin-right: -15px;
+}
+#header div.top>div.search>ul li{
+	float: left;
+}
+#header div.top div.search ul li:first-child{
+	margin-right: 10px;
+}
+#header div.top div.search p{
+	font-size: 13px;
+	color: #6d7275;
+	margin-right: 30px;
+}
+.number{
+	position: absolute;
+	top: 22px;
+    right: 166px;
+	color:#fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+.snsicon{
+	position: absolute;
+	top: 33px; right: 0;
+}
+.snsicon ul li{
+	float: left;
+	margin-right: 5px;
+}
+
