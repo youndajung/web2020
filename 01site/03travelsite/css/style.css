@@ -169,54 +169,211 @@ _position: relative;
 	color: #71c565;
 	margin-right: 0;
 }
-
-
-
-
 #section_wrap .section_wrap_top .top_wrap02{
 	width: 482px; height: 100%;
-	background-color: #00f;
 }
+/*section_wrap_bottom*/
 #section_wrap .section_wrap_bottom{
-	margin-top: 16px; background-color: pink;
+	margin-top: 16px;
 }
-#section_wrap .section_wrap_bottom ul>li{
+#section_wrap .section_wrap_bottom >ul>li{
 	float: left;
 	margin-right: 16px;
 	margin-bottom: 16px;
 	width: 233px; height: 240px;
 	position: relative;
 }
-#section_wrap .section_wrap_bottom ul>li>.text_wrap{
+#section_wrap .section_wrap_bottom>ul>li>.text_wrap{
 	position: absolute;
 	bottom: 0; left: 0;
-	width: 233px; height: 50px;
+	width: 233px; height: 65px;
 	padding: 10px 20px;
 	font-size: 16px;
 	font-weight: bold;
 	background-color:#152630;
 	color:#fff;
 }
-#section_wrap .section_wrap_bottom ul>li>.content_up>.text_wrap{
-
-}
-
-}
-#section_wrap .section_wrap_bottom ul>li:nth-child(4){
+#section_wrap .section_wrap_bottom>ul>li:nth-child(4){
 	margin-right: 0;
 }
-#section_wrap .section_wrap_bottom ul>li:nth-child(5){
-	margin-bottom: 0;
+/*bottom_5*/
+#section_wrap .section_wrap_bottom>ul>li:nth-child(5){
+	margin-bottom: 0; overflow:hidden;
 }
-#section_wrap .section_wrap_bottom ul>li:nth-child(6){
-	margin-bottom: 0;
+#section_wrap .section_wrap_bottom>ul>li:nth-child(5)>.plus{
+	position: absolute;
+	top: 50%; margin-top: -15px;
+	left: 50%; margin-left: -15px;
 }
-#section_wrap .section_wrap_bottom ul>li:nth-child(7){
-	margin-bottom: 0;
+.section_wrap_bottom>ul>li:nth-child(5)>.bg{
+	width: 233px; height: 240px;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute; top: 240px;
+	transition:.5s;
+	opacity: 0;
 }
-#section_wrap .section_wrap_bottom ul>li:nth-child(8){
-	margin-right: 0;
-	margin-bottom: 0;
+.section_wrap_bottom>ul>li:nth-child(5)>.text{
+	width: 233px; height: 120px;
+	position: absolute; top: 0; left: 0;
+	text-align: center;
+	color:#fff;
+	padding: 15px 0 10px 0;
+	transition:.5s;
+}
+.section_wrap_bottom>ul>li:nth-child(5)>.text>ul{
+	width: 135px; margin: 0 auto;
+	padding-bottom: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(5)>.text>ul li{
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+}
+.section_wrap_bottom>ul>li:nth-child(5)>.text>ul li:first-child{
+	margin-right: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(5)>.text>p{
+	font-size: 14px;
+}
+.section_wrap_bottom>ul>li:nth-child(5):hover .text{
+	top: 120px; left: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(5):hover .bg{
+	top: 0; opacity: 1;
 }
 
+/*bottom_6*/
+#section_wrap .section_wrap_bottom>ul>li:nth-child(6){
+	margin-bottom: 0; overflow:hidden;
+}
+#section_wrap .section_wrap_bottom>ul>li:nth-child(6)>.plus{
+	position: absolute;
+	top: 50%; margin-top: -15px;
+	left: 50%; margin-left: -15px;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.bg{
+	width: 233px; height: 240px;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute; top: 240px;
+	transition:.5s;
+	opacity: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.text{
+	width: 233px; height: 120px;
+	position: absolute; top: 0; left: 0;
+	text-align: center;
+	color:#fff;
+	padding: 15px 0 10px 0;
+	transition:.5s;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.text>ul{
+	width: 135px; margin: 0 auto;
+	padding-bottom: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.text>ul li{
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.text>ul li:first-child{
+	margin-right: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(6)>.text>p{
+	font-size: 14px;
+}
+.section_wrap_bottom>ul>li:nth-child(6):hover .text{
+	top: 120px; left: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(6):hover .bg{
+	top: 0; opacity: 1;
+}
+/*bottom_7*/
+#section_wrap .section_wrap_bottom>ul>li:nth-child(7){
+	margin-bottom: 0; overflow:hidden;
+}
+#section_wrap .section_wrap_bottom>ul>li:nth-child(7)>.plus{
+	position: absolute;
+	top: 50%; margin-top: -15px;
+	left: 50%; margin-left: -15px;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.bg{
+	width: 233px; height: 240px;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute; top: 240px;
+	transition:.5s;
+	opacity: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.text{
+	width: 233px; height: 120px;
+	position: absolute; top: 0; left: 0;
+	text-align: center;
+	color:#fff;
+	padding: 15px 0 10px 0;
+	transition:.5s;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.text>ul{
+	width: 135px; margin: 0 auto;
+	padding-bottom: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.text>ul li{
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.text>ul li:first-child{
+	margin-right: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(7)>.text>p{
+	font-size: 14px;
+}
+.section_wrap_bottom>ul>li:nth-child(7):hover .text{
+	top: 120px; left: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(7):hover .bg{
+	top: 0; opacity: 1;
+}
+/*bottom_8*/
+#section_wrap .section_wrap_bottom>ul>li:nth-child(8){
+	margin-right: 0; margin-bottom: 0; overflow:hidden;
+}
+#section_wrap .section_wrap_bottom>ul>li:nth-child(8)>.plus{
+	position: absolute;
+	top: 50%; margin-top: -15px;
+	left: 50%; margin-left: -15px;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.bg{
+	width: 233px; height: 240px;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute; top: 240px;
+	transition:.5s;
+	opacity: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.text{
+	width: 233px; height: 120px;
+	position: absolute; top: 0; left: 0;
+	text-align: center;
+	color:#fff;
+	padding: 15px 0 10px 0;
+	transition:.5s;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.text>ul{
+	width: 135px; margin: 0 auto;
+	padding-bottom: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.text>ul li{
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.text>ul li:first-child{
+	margin-right: 5px;
+}
+.section_wrap_bottom>ul>li:nth-child(8)>.text>p{
+	font-size: 14px;
+}
+.section_wrap_bottom>ul>li:nth-child(8):hover .text{
+	top: 120px; left: 0;
+}
+.section_wrap_bottom>ul>li:nth-child(8):hover .bg{
+	top: 0; opacity: 1;
 /*section끝*/
