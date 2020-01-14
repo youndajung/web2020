@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>form양식 연습</title>
+	<style>
+		.join{width: 300px; margin: 0 auto;}
+		.blind{position: absolute; text-indent: -9999px;}
+		fieldset{
+			position: relative;
+			border: none;
+			width: 100%;
+			background-color: red;
+			padding: 0 10px;
+			height: 100px;
+		}
+		fieldset legend{display: block;}
+		fieldset label{display: block; padding: 5px 0;}
+		fieldset input{
+			width: 100%; height: 40px;
+			text-indent: 10px;
+			background-color: #eee;
+			border: none;
+			line-height: 30px;
+			font-size: 16px;
+			border: 1px solid #aaa;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" class="join">
+		<p>
+			<fieldset>
+				<legend class="blind">아이디입력</legend>
+				<label for="user-id">ID</label>
+				<input type="text" id="user-id" name="user-id" placeholder="아이디입력" required>
+			</fieldset>
+		</p>
+		<p>
+			<fieldset>
+				<legend class="blind">비번입력</legend>
+				<label for="user-pw">PW</label>
+				<input type="text" id="user-pw" name="user-id" placeholder="비밀번호입력" required>
+			</fieldset>
+		</p>
+	</form>
+</body>
+</html>

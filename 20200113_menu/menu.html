@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+	<style>
+		nav.gnb{width: 1000px; margin: 0 auto ; background-color: #ddd;
+			position: relative; z-index: 1;
+		}
+		.submenu{display: none;}
+		nav.gnb>ul{}
+		nav.gnb>ul>li{float:left; width: 20%; height: 40px;}
+		nav.gnb>ul>li>a{display: block; text-align: center; line-height: 40px;}
+		nav.gnb>ul>li:hover{background-color: skyblue;}
+
+		/*세로1메뉴*/
+		/*nav.gnb>ul>li:hover .submenu{display: block;}*/
+		/*.submenu{background-color: skyblue;}*/
+		/*전체메뉴*/
+		nav.gnb>ul:hover .submenu{display: block;}
+		nav.gnb>ul>li:hover .submenu{background-color: skyblue;}
+		.submenu{background-color:#ddd}
+
+		/*submenu
+		/*nav.gnb>ul>li:first-child .submenu{display: block;}*/
+		.submenu li>a{display: block; text-align: center; line-height: 35px;}
+		.submenu li:hover{background-color: #eee;}
+
+		/*visual*/
+		.visual{width: 1000px; margin: 0 auto;}
+		.visual img{width: 100%;}
+
+		/*.bx-wrapper {
+		    -moz-box-shadow: 0 none;
+		    -webkit-box-shadow: 0 none;
+		    box-shadow: 0 none;
+		    border: 0 none;
+		}
+		.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    		position: absolute;
+    		bottom: 30px;
+    		width: 100%;
+		}*/
+	</style>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+
+</head>
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu">
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu">
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu">
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu">
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt=""></li>
+			<li><img src="images/pc02.jpg" alt=""></li>
+			<li><img src="images/pc03.jpg" alt=""></li>
+		</ul>
+	</div>
+
+
+</body>
+</html>
