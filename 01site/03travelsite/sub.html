@@ -10,22 +10,30 @@
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body class="company">
 	<header id="header">
 		<div class="topWrap">
 			<div class="top">
-				<h1>TRAVEL</h1>
+				<h1><a href="index.html">TRAVEL</a></h1>
 				<div class="search">
 					<ul class="clearfix">
+
+
 						<li>
-							<img src="images/searchtext.jpg" alt="">
+							<form action="" method="method">
+								<fieldset>
+									<legend class="blind">검색하기</legend>
+									
+									<label for="search"><img src="images/searchtext.jpg" alt=""></label>
+									<input type="text" id="search" placeholder="검색어를입력하세요.">
+									
+									
+								</fieldset>
+								<img src="images/search.jpg" alt="" class="sicon">
+							</form>
 						</li>
-						<li>
-							<p>검색어를 입력하세요.</p>
-						</li>
-						<li>
-							<img src="images/search.jpg" alt="">
-						</li>
+
+
 					</ul>
 				</div>
 				<div class="number">
@@ -51,7 +59,9 @@
 						<a href="#">여행TIP</a>
 						<img src="images/new.jpg" alt="">
 					</li>
-					<li><a href="#">회사소개</a></li>
+					<li>
+						<a href="sub.html">회사소개</a>
+					</li>
 					<li><a href="#">커뮤니티</a></li>
 				</ul>
 			</div>
