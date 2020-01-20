@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>당신의 취미를 찾아서,뚜꾸리</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div id="header">
+			<ul class="clearfix">
+				<li>
+					<h1>ㄸㄲㄹ</h1>
+				</li>
+				<li>
+					<nav>
+						<ul class="gnb clearfix">
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">크리에이티브 지원</a></li>
+						</ul>
+					</nav>
+				</li>
+			</ul>
+		</div>
+
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li>
+					<img src="images/ddugguri01.jpg" alt="">
+				</li>
+				<li>
+					<img src="images/ddugguri01.jpg" alt="">
+				</li>
+				<li>
+					<img src="images/pddugguri01.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+	</header>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+</body>
+</html>
