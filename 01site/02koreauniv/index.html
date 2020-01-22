@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>한국대학교</title>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -202,7 +203,7 @@
 
 						<div class="textWrap07">
 							<img src="images/bg05.jpg" alt="">
-							<a href="#"><img src="images/play01.png" alt=""
+							<a href="https://www.youtube.com/embed/oOdbGXU8BlM" class="modal" title="한국대학교홍보영상"><img src="images/play01.png" alt=""
 							></a>
 						</div>
 					</li>
@@ -335,6 +336,8 @@
 
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery.colorbox.js"></script>
 	<script>
 		$(document).ready(function(){
 			var mySlide = $(".slider01").bxSlider({
@@ -384,7 +387,15 @@
 				mySlide03.goToPrevSlide()
 			});
 
-
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".modal").colorbox({
+				iframe:true,
+				innerWidth:600,
+				innerHeight:338
+			});
 		});
 	</script>
 
