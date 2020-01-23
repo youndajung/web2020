@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function</title>
+</head>
+<body>
+	<script>
+		function adder(a,b){
+			// var a =10;
+			// var b =20;
+			var sum =a+b;
+			// document.write(sum);
+			return sum;//retrun 이라는 키워드를 통해 값을 바깥으로 빼줌
+		}
+		// adder();
+		var n =adder(100, 500);
+		document.write(n);
+	</script>
+
+	<br>
+	<script>
+		function dan(dan,size){
+			// var dan =3;
+			document.write("<div style='font-size:"+size+"px'>"+dan+"단</div>");
+			for(var i=1; i<=9; i++){
+				document.write(dan+"x"+ i +"="+dan*i+"<br>");
+			};
+
+		}; 
+	</script>
+
+	<style>
+		.box1,.box2{float:left; width: 150px; text-align: center; border: 2px solid #000;border-radius: 10px; padding: 10px 0;}
+		.box1{margin-right: 10px; transition: .3s}
+		.box2{margin-right: 10px; transition: .3s}
+		.box1:hover{box-shadow: 1px 1px 20px; font-weight: bold;}
+		.box2:hover{box-shadow: 1px 1px 20px; font-weight: bold;}
+	</style>
+
+	<div class="box1">
+		<script> dan(3,20);</script>
+	</div>
+	<div class="box2">
+		<script> dan(8,20);</script>
+	</div>
+</body>
+</html>
