@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function03</title>
+	<script>
+		//var result;
+		function add(name,num){
+			document.write(name + " 학생이 1부터" + num+ "까지 덧셈을 수행합니다.<br>");
+			var sum =0;
+			for(var i=1;i<=num;i++){
+				sum+=i;
+			}
+			//return sum;
+			document.write("결과: "+sum);
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<script>
+			add("뚜꾸리",10);
+		</script>
+	</div>
+	<div>
+		<script>
+			add("두레박",100);
+		</script>
+	</div>
+</body>
+</html>
