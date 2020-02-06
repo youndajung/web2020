@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		function init(){//initial초기값으로 많이 지정한다//
+			var p= document.getElementById("p");
+			var div=document.getElementById("div");
+			p.onmouseover= over;//onmouseover/out 은 리스너 이름//
+			p.onmouseout= function(){
+				// p.style.backgroundColor="white";
+				this.style.backgroundColor="white";
+			};
+			div.addEventListener("click",overDiv);
+			div.addEventListener("mouseout",//<-이벤트등록하고(on은 빠진다.) 무명함수넣어줌==>바로등록하여 사용하는방법//
+				function(){
+					this.style.backgroundColor="white";
+				}
+			);
+			
+		}
+		
+
+		function over(){
+			p.style.backgroundColor="orchid";
+		}
+		function overDiv(){
+			div.style.backgroundColor="skyblue";
+		}
+		function outDiv(){
+			div.style.backgroundColor="white";
+		}
+		// function out(){
+		// 	p.style.backgroundColor="white";
+		// }
+
+
+	</script>
+</head>
+<body onload="init()">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<p id="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, accusamus!</p>
+	<div id="div">Lorem ipsum dolor sit amet.</div>
+	<div id="div1" onmouseover="this.style.backgroundColor='blue'" onmouseout="this.style.backgroundColor='white'">Lorem ipsum dolor sit amet.</div>
+
+</body>
+</html>

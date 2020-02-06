@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event01</title>
+	<script>
+		function init(){
+			var p=document.getElementById("p");
+
+			p.onmouseover=over;
+			p.onmouseout=out;
+		};
+
+
+		function over(){
+			p.style.color="blue";
+		}
+		function out(){
+			p.style.color="black";
+		}
+	</script>
+</head>
+<body onload="init()">
+	<p id="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quam.</p>
+	<div id="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, quasi.</div>
+</body>
+</html>

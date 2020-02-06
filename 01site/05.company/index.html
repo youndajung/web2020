@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	
-	
 </head>
 <body>
 	<header id="main_header">
@@ -24,6 +23,11 @@
 					<li><a href="#">인재채용</a></li>
 				</ul>
 			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
 		</div>
 		<div class="slider_wrap">
 			<ul class="slider">
@@ -196,7 +200,6 @@
 				controls:false,
 			});
 			
-
 			$(".prevBtn").click(function(){
 				mySlide.goToPrevSlide()
 			});
@@ -204,6 +207,19 @@
 			$(".nextBtn").click(function(){
 				mySlide.goToNextSlide()
 			});
+
+			$(".toggleMenu").click(function(){
+				var myClass= $(this).attr("class"); //$(".toggleMenu")와 같다//
+				console.log(myClass)
+				if(myClass == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			});
+
 
 		});
 	</script>

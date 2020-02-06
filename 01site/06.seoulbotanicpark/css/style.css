@@ -41,6 +41,8 @@ header .header_top .gnb>ul>li>a>img{
    display: block;
    padding-top: 15px;
 }
+/*서브메뉴*/
+/*.gnb li .submenu{width: 100px; height: 500px; poa}*/
 
 header .first{
    position: absolute;
