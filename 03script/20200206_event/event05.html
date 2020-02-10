@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, id.</h3>
+	<hr>
+	<img src="../../images/testimg.jpg" alt="" onmousemove="where(event)"
+	><!-- event는 인자다 -->
+	<div id="div"></div>
+	<script>
+		var div =document.getElementById("div");
+		function where(e){//event는 위의 인자를 받는 것으로 ,e여도 상관없다//
+			console.log("mouse X : "+e.offsetX+", Y : "+e.offsetY);
+			var text= ("offset X : "+e.offsetX+", Y : "+e.offsetY)+"<br>";
+			text+="client X : "+e.clientX+", Y : "+e.clientY+"<br>"
+
+			div.innerHTML=text;
+
+
+		}
+	</script>
+</body>
+</html>

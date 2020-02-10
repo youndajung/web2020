@@ -218,7 +218,19 @@
 					$(".toggleMenu").removeClass("change");
 					$("#main_menu").stop().animate({left:"-100%"},300)
 				}
+				
 			});
+			// $(window).on("resize",function(){});//=>일반이벤트.on은 addEventListener와 같다.(js안에서)
+				$(window).resize(function(){//=>축약이벤트.위와 같은 이벤트이다.//
+					var Wsize =$(window).width();
+					console.log(Wsize);
+					if (Wsize>960){
+						$("#header_top").find(".toggleMenu").removeClass("change");
+					}else{
+						$("#header_top").find(".toggleMenu").removeClass("change");
+						$("#main_menu").css({left:"-100%"});
+					}
+				});
 
 
 		});

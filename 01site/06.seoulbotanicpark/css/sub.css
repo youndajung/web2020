@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+@import "sub_pc.css" all and (min-width:960px);
+@import "sub_tablet.css" all and (max-width:959px);
