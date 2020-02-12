@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>SEASON_tab</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.contentWrap{width: 522px; margin: 0 auto;}
+		li{ float: left; width: 25%;}
+		li img{display: block; width: 100%;}
+		.contentbox>div{display: none;}
+		.contentbox>div:first-child{display: block;}
+	</style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap>ul>li").click(function(){
+				var liNum =$(this).index();
+				$(".contentbox>div").hide();
+				$(".contentbox>div").eq(liNum).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li><img src="../images/btn1_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn2_1.jpg" alt="여름"></li>
+			<li><img src="../images/btn3_1.jpg" alt="가을"></li>
+			<li><img src="../images/btn4_1.jpg" alt="겨울"></li>
+		</ul>
+		<div class="contentbox">
+			<div><img src="../images/spring.jpg" alt="봄"></div>
+			<div><img src="../images/summer.jpg" alt="여름"></div>
+			<div><img src="../images/fall.jpg" alt="가을"></div>
+			<div><img src="../images/winter.jpg" alt="겨울"></div>
+		</div>
+	</div>
+</body>
+</html>

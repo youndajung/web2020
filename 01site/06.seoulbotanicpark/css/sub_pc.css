@@ -206,6 +206,7 @@ header .header_top .gnb>ul>li>a{
 
 
 .contentWrap{width: 1260px; margin: 0 auto;}
+.contentWrap>img{width: 100%;}
 .contentWrap.cp{padding: 0 0 200px 0;}
 
 
@@ -215,8 +216,11 @@ footer#footer{
    background-color: #d2c37c;
    position: relative;
 }
-footer img.trees{
-   position: absolute; bottom: 0;
+footer img.trees_left{
+   position: absolute; bottom: 0; left: -100px;
+}
+footer img.trees_right{
+   position: absolute; bottom: 0; right: -100px;
 }
 footer .call{
    width: 350px;margin: 0 auto;

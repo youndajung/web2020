@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.btnWrap{width: 1000px; margin: 0 auto;}
+		li{float: left; width: 20%; line-height: 40px; border: 1px solid #000; border-right: none; text-align: center;}
+		li:last-child{border-right: 1px solid #000;}
+		li:hover{background-color: gray; color:#fff;}
+		li.active{background-color: black; color:#fff;}
+		.contentWrap{border: 1px solid #000; border-top: none;}
+		.contentWrap div{padding: 30px; display: none;}
+		.contentWrap div:first-child{padding: 30px; display: block;}
+	</style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".btnWrap>ul>li").click(function(){
+				var liNum=$(this).index();
+				$(".btnWrap>ul>li").removeClass();
+				$(this).addClass("active");
+				$(".contentWrap>div").hide();
+				$(".contentWrap>div").eq(liNum).show();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="btnWrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="contentWrap">
+		<div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eos, nobis delectus modi omnis praesentium ab explicabo, necessitatibus voluptatibus dolorem, maxime eum ut. Labore numquam ducimus obcaecati explicabo dicta quos.</div>
+		<div>2.Ipsa laboriosam consectetur quos alias, sint est aspernatur dolorem nobis excepturi vel, veniam rem eaque qui voluptate minima animi ex nemo modi in. Officiis explicabo perspiciatis sit porro unde maiores?</div>
+		<div>3.Culpa rerum fugiat praesentium cumque numquam possimus similique excepturi dolores quasi quisquam a, temporibus pariatur, veritatis repellat commodi voluptates ipsa ullam at voluptatibus totam accusamus optio ex labore reprehenderit magni.</div>
+		<div>4.Iusto magnam veritatis reprehenderit neque illo natus inventore repellat non ipsam, rerum porro quaerat odio a aperiam omnis aut voluptates aliquid soluta explicabo vero consectetur provident. Non soluta, ipsa asperiores!</div>
+		<div>5.Iste alias possimus labore facere repellendus. Aspernatur veritatis aperiam dolor iusto qui ipsum, nam, consequuntur asperiores error, eos provident maxime. Rem aliquid eaque suscipit soluta incidunt excepturi eius asperiores sit.</div>
+	</div>
+	</div>
+	
+</body>
+</html>

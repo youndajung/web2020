@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		button#btnAdd{display: none;}
+		ul li{float: left; border: 5px solid #ddd; padding: 10px;}
+		ul li.active{background-color: red;}
+		div.box1{}
+		div.box2,
+		div.box3{display: none;}
+	</style>
+	<script>
+		// $("선택자")메소드(리스너);
+		$(document).ready(function(){
+			$("button#btnAdd").hide();
+			$("button#btnDel").click(function(){
+				$("p").hide();
+				$(this).hide();
+				$("#btnAdd").show();	
+			});
+			$("button#btnAdd").click(function(){
+				$("p").show();
+				$(this).hide();
+				$("#btnDel").show();
+			});
+			
+			var pCount= $("p").length;
+			console.log(pCount);
+			
+			$("p").eq(0).hide();
+			$("p").eq(1).hide();
+			$("ul>li").eq(0).addClass("active")
+
+			$("ul>li").eq(0).click(function(){
+				$("div").eq(0).show();
+				$("div").eq(1).hide();
+				$("div").eq(2).hide();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+			});
+			$("ul>li").eq(1).click(function(){
+				$("div").eq(0).hide();
+				$("div").eq(1).show();
+				$("div").eq(2).hide();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+			});
+			$("ul>li").eq(2).click(function(){
+				$("div").eq(0).hide();
+				$("div").eq(1).hide();
+				$("div").eq(2).show();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, consectetur.</p>
+	<button id="btnDel">1메세지삭제</button>
+	<button id="btnAdd">2메세지생성</button>
+
+	<ul class="clearfix">
+		<li >menu1</li>
+		<li >menu2</li>
+		<li >menu3</li>
+	</ul>
+	<div class="box1">1.한성용 선생님은</div>
+	<div class="box2">2.날 가끔 슬프게 하시지만</div>
+	<div class="box3">3.그래도 착한 사람이다! 선생님 최고!</div>
+	<script>
+		// $("선택자").이벤트();
+		// $("button").on("click",function(){});
+		
+	</script>
+</body>
+</html>

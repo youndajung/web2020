@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.contentWrap{width: 1000px; margin: 0 auto;}
+		ul li{float: left; width: 20%; text-align: center;line-height: 40px;border: 1px solid #000; border-right: none;}
+		ul li:last-child{border-right: 1px solid #000;}
+		ul li:hover{background-color: red;}
+		li.active{background-color: orange; color:#fff;}
+		.contentText{border: 1px solid #000; border-top: none;}
+		.contentText div{padding: 30px; display: none;}
+		.contentText div:first-child{padding: 30px; display: block;}
+	</style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap>ul>li").click(function(){
+				var liNum =$(this).index();
+				console.log(liNum);
+				$(".contentWrap>ul>li").removeClass();
+				$(this).addClass("active");
+				// $(".contentWrap>ul>li").eq(liNum).addClass("active");
+				$(".contentText>div").hide();
+				$(".contentText>div").eq(liNum).show();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="contentText">
+			<div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates nobis soluta velit facere distinctio. Distinctio, nobis, voluptatibus atque dicta consectetur est consequuntur illo obcaecati deleniti ipsa, totam sapiente amet quis.</div>
+			<div>2.Necessitatibus quo placeat enim rem provident nesciunt omnis, quod tempora cumque. Error corporis in voluptatem, ipsam ducimus quos soluta sunt qui eligendi ad, perferendis labore vel eaque laborum sapiente, quia?</div>
+			<div>3.Nobis reprehenderit a eveniet modi earum quia tempora molestiae aliquid cumque laborum cum ut alias iste facere eum in nemo esse, consequuntur tempore iusto accusamus saepe. Quasi, iste reprehenderit consequatur.</div>
+			<div>4.Recusandae facilis tempora impedit, eos dolor, quam pariatur iste in similique tempore temporibus delectus aspernatur est praesentium, placeat molestiae adipisci ea. Voluptatum beatae perspiciatis velit molestias omnis pariatur culpa blanditiis?</div>
+			<div>5.Sapiente unde, magnam necessitatibus exercitationem! Totam non, nihil natus maxime animi quod eaque, quis amet beatae est vel ad quidem incidunt minima odio, ipsa rerum dignissimos quam. Eius sapiente, nihil.</div>
+		</div>
+	</div>
+</body>
+</html>

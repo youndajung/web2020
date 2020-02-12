@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>settimeout&setinterval</title>
+	<script>
+		function myAlert(time){//time=매개변수
+			alert(time+"초 후 1번 실행 됩니다:)");
+		}
+		// setTimeout("myAlert(3)",3000);//3=인자
+	</script>
+</head>
+<body>
+	<div>
+		<span id="div" style="background-color:red">Lorem ipsum dolor.</span>
+	</div>
+	<a href="#" onclick="rotate()">캔스탑러빙유:)</a>
+	<a href="#" onclick="sss()">슽탑!!!!</a>
+	<a href="#" onclick="res()">캔스탑어겐!!!</a>
+	<script>
+		var div=document.getElementById("div");
+		function rotate(){
+			var str=div.innerHTML;
+			var firstChar=str.substr(0,1);
+			var remains=str.substr(1,str.length-1)
+			str=remains+firstChar
+			console.log(str);
+			div.innerHTML=str;
+		}
+		var timerId=setInterval("rotate()",200);
+		function sss(){
+			clearInterval(timerId);
+		}
+		function res(){
+			timerId=setInterval("rotate()",200);
+		}
+	</script>
+</body>
+</html>

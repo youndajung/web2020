@@ -108,6 +108,8 @@ header .jungle{
   margin: 0 auto;
   position: relative;
 }
+.container01>ul>li:first-child{border-radius:0 0 0 100px; overflow: hidden;}
+.container01>ul>li:last-child{border-radius:0 0 100px 0 ; overflow: hidden;}
 
 
 .container_wrap .container01>ul{}
@@ -172,13 +174,13 @@ header .jungle{
    position: absolute; top: 620px;
 }
 .container_wrap .notice .nslider_wrap{width: 1130px; margin: 0 auto;}
-.container_wrap .notice .nslider_wrap .nsliderLi{height: 90px;_background-color:pink;padding-top:10px;}
+.container_wrap .notice .nslider_wrap .nsliderLi{height: 90px;padding-top:10px;}
 
 
 .container_wrap .notice ul.nslider>li{
-   float: left; /*s*/
+   float: left;
 }
-.container_wrap .notice .nslide01{_background-color:red;height:35px; }
+.container_wrap .notice .nslide01{height:35px; }
 
 .container_wrap .notice .nslide01>li{line-height: 35px;
    float: left; height: 35px;
@@ -219,46 +221,48 @@ header .jungle{
 .container_wrap .slider_btn .upBtn{margin-bottom: 25px;}
 /*퀵메뉴*/
 .container_wrap .quickWrap{width: 1260px;margin: 0 auto;
- /*bottom:0;*/height:210px; position: relative;
+height:250px; position: relative;
 }
 .container_wrap .quick_menu{
-   width: 100%; height: 210px;
+   width: 100%; height: 250px;
    padding: 0 150px;
    background-color: #03511f;
 }
-.container_wrap .quick_menu div{
-   display: inline-block;
-   background-color: orange;
-}
-.container_wrap .quick_menu div a{position: absolute; bottom: 0;}
-.container_wrap .quick_menu div .quick{transition:.3s; z-index:1;}
-.container_wrap .quick_menu div:last-child{margin-right: 0;}
-.container_wrap .quick_menu .quick01:hover .quick{transform:scale(1.2,1.2);}
+.container_wrap .quick_menu a{position: absolute; top: 10px;}
+.container_wrap .quick_menu .quick{transition:.3s;}
+.container_wrap .quick_menu>a:hover .quick{transform:scale(1.2,1.2);}
 
 .container_wrap .nextBtn{position: absolute; right :-100px; top: 100px;}
 .container_wrap .prevBtn{position: absolute; left: -100px; top: 100px;}
-
+/*컨테이너시작*/
 .box_wrap{
    height: 1715px;
    background:url(../images/boxbg.png) repeat center;
 }
-.box_wrap h3{
+.box_wrap>h3{
    width: 420px;
    font-size: 50px;
-   padding: 50px 0;
    margin: 0 auto;
-   color:#fff;
+   color:#222;
+   font-weight: bold;
+}
+.box_wrap h3>span{
+   display: block;
+   padding-top: 30px;
+   width: 200px;
+   font-size: 100px;
+   margin: 0 auto;
+   color:#dcdcdc;
+   font-weight:bold;
 }
 .box_wrap .box{
    width: 1260px; height: 1260px; 
-   margin: 100px auto; 
-   background-color: red;
+   margin: 40px auto 100px;
 }
 .box_wrap .box ul{}
 .box_wrap .box ul li{
    width: 25%; height: 315px; 
-   float: left; 
-   background-color: #fff;
+   float: left;
    position: relative;
    overflow:hidden;
 }
@@ -321,13 +325,13 @@ header .jungle{
 .box ul li.box03 .bsWrap .textWrap{
    width: 315px; height: 315px;
    background-color: #e3e3e3;
-   padding: 50px 0;
+   padding: 40px 0;
    
 }
 .box ul li.box03 .bsWrap .snstt{
    font-size: 24px;
    font-weight:bold;
-   padding-bottom: 40px;
+   padding-bottom: 30px;
    color:#444;
 }
 .box ul li.box03 .bsWrap .snssb{
@@ -339,6 +343,7 @@ header .jungle{
 .box ul li.box03 .bsWrap .instagram{
    font-size:14px;
    color:#666;
+   padding-top: 10px;
 }
 /*box4*/
 .box ul li.box04{background-color: #6f6a26;}
@@ -390,8 +395,11 @@ footer#footer{
    background-color: #d2c37c;
    position: relative;
 }
-footer img.trees{
-   position: absolute; bottom: 0;
+footer img.trees_left{
+   position: absolute; bottom: 0; left: -100px;
+}
+footer img.trees_right{
+   position: absolute; bottom: 0; right: -100px;
 }
 footer .call{
    width: 350px;margin: 0 auto;
