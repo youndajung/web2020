@@ -6,14 +6,16 @@ header#sub_header{
 }
 .story{ background:url(../images/sub_main.jpg) center no-repeat;
   background-size: cover;}
-.look{ background:url(../images/sub_main.jpg) center no-repeat;
+.look{ background:url(../images/sub_main02.jpg) center no-repeat;
 background-size: cover;}
-.use{ background:url(../images/sub_main.jpg) center no-repeat;
+.use{ background:url(../images/sub_main03.jpg) center no-repeat;
 background-size: cover;}
-.join{ background:url(../images/sub_main.jpg) center no-repeat;
+.join{ background:url(../images/sub_main04.jpg) center no-repeat;
 background-size: cover;}
-.plant{ background:url(../images/sub_main.jpg) center no-repeat;
+.plant{ background:url(../images/sub_main05.jpg) center no-repeat;
 background-size: cover;}
+header.join>div.header_top>nav.gnb>ul>li>a,
+header.plant>div.header_top>nav.gnb>ul>li>a{color:#ddd;}
 header#sub_header h2{
    width: 300px;
    margin: 0 auto;
@@ -36,6 +38,7 @@ header .header_top>h1{
    float: left;
    height: 50px;
 }
+header .header_top>h1 .logoWhite{display: none;}
 header .header_top .gnb{
    float: right;
    width: 650px;

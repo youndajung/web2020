@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		.contentWrap{width: 1000px; margin: 0 auto; margin-top: 10px;}
+		.contentWrap ul{
+			border-bottom: 1px solid #ddd;
+			display:table; width: 100%;
+		}
+		.contentWrap ul li{
+			display:table-cell;  line-height: 60px; text-align: center;
+			font-size: 14px; padding: 0 20px;
+			position: relative;
+			transition:.3s;
+			border-top: 2px solid #ddd;
+			border-bottom: 2px solid #ddd;
+		}
+			
+		.contentWrap ul li:hover{font-weight: bold;}
+		.contentWrap ul li.active{
+			font-weight: bold; color: red;
+			border-top: 2px solid red;
+		}
+		.contentWrap ul li.active:after{
+			content:"";
+			border-width:5px;
+			border-style:solid;
+			border-color:red transparent transparent transparent;
+			position: absolute;
+			top:0; left: 50%;
+			transform:translate(-50%);
+	</style>
+	<script>
+		var viewImg=[
+		"images/img01.jpg",
+		"images/img02.jpg",
+		"images/img03.jpg",
+		"images/img04.jpg",
+		"images/img05.jpg"
+		]
+		$(document).ready(function(){
+			$(".contentWrap>ul>li").click(function(){
+				var liNum=$(this).index();
+				$(".contentImg>img").attr("src",viewImg[liNum]);
+				$(".contentWrap>ul>li").removeClass();
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li class="active">국내 1호 정지수 확장</li>
+			<li>라이브 파티플래닝 교육과정</li>
+			<li>생활문화 예술을 이끄는 힘</li>
+			<li>갤러리</li>
+			<li>언론에 바라본 WOW</li>
+		</ul>
+		<div class="contentImg">
+			<img src="images/img01.jpg" alt="파티플래너">
+		</div>
+	</div>
+</body>
+</html>

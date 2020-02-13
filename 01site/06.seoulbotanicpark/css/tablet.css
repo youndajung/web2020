@@ -26,6 +26,7 @@ header .header_top>h1{
    float: left;
    height: 50px;
 }
+header .header_top>h1 .logoWhite{display: none;}
 header .header_top .gnb{
    float: right;
    position: fixed;

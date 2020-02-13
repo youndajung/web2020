@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jquery_css</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		p{background-color: skyblue;}
+	</style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$("button").click(function(){
+				// $("p,div").css("font-size",30)//선택자멀티지정하기
+				// .css("background-color","skyblue")
+				// ;
+				$("div").css("font-size",30);
+				$("div").css("background-color","skyblue");
+
+				$("p").css({
+					"font-size":20,
+					"background-color":"red"
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum.</p>
+	<div>test</div>
+	<p>Possimus, laudantium!</p>
+	<p>Animi, laboriosam!</p>
+	<p>Voluptate, ipsa!</p>
+	<p>Est, repudiandae.</p>
+	<button>글자크기 변경!</button>
+</body>
+</html>
