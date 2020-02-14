@@ -3,23 +3,32 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>WOW</title>
+	<title>tab</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<style>
-		.contentWrap{width: 1000px; margin: 0 auto;}
-		.contentWrap ul{display: table; width: 100%;}
+		.contentWrap{width: 1000px; margin: 0 auto; padding-top: 10px;}
+		.contentWrap ul{width: 100%; display: table; margin-bottom: 50px;}
 		.contentWrap ul li{
 			display: table-cell; 
-			border-top: 2px solid #ddd; 
-			border-bottom: 2px solid #ddd; 
-			line-height: 50px; 
-			text-align: center; 
+			font-weight: bold;
+			line-height: 50px;
+			text-align: center;
 			position: relative;
+			transition:.3s;
 		}
-		.contentWrap ul li:hover{font-weight: bold; color:red;}
-		.contentWrap ul li.active{font-weight: bold; color:red; border-top: 2px solid red;}
-		.contentWrap ul li.active:after{content:""; border-width:5px; border-style: solid; border-color:red transparent transparent transparent; position: absolute; top: 0; left: 50%; transform:translate(-50%);}
+		.contentWrap ul li.active{font-weight: bold; background-color: black; color:#fff;}
+		.contentWrap ul li:hover{font-weight: bold; background-color: black; color:#fff;}
+		.active:before{
+			content:"";
+			border-width:5px;
+			border-style: solid;
+			border-radius:100px;
+			border-color: red;
+			position: absolute;
+			top: 5px; left: 50%;
+			transform:translate(-50%);
+		}
 	</style>
 	<script>
 		$(document).ready(function(){
@@ -35,12 +44,12 @@
 </head>
 <body>
 	<div class="contentWrap">
-		<ul>
-			<li class="active">국내 1호 정지수 확장</li>
-			<li>라이브 파티플래닝 교육과정</li>
-			<li>생활문화 예술을 이끄는 힘</li>
-			<li>갤러리</li>
-			<li>언론에 바라본 WOW</li>
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
 		</ul>
 		<div class="contentImg">
 			<img src="images/img01.jpg" alt="">
@@ -52,4 +61,3 @@
 	</div>
 </body>
 </html>
-<!-- "contentImg".hide().eq(0).show(); -->
