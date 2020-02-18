@@ -73,6 +73,11 @@
 				slideNavigation:true,
 				afterLoad:function(anchorslink,index){
 					console.log(anchorslink+","+index);
+					if(index==1){
+						$("#page1 iframe").attr("src","https://www.youtube.com/embed/581jwLI73NQ?autoplay=1");
+					}else{
+						$("#page1 iframe").attr("src","");
+					}
 					if(index==2){
 						$("#onView").addClass("move");
 					}else{
@@ -101,6 +106,7 @@
 	</nav>
 	<div id="fullPage">
 		<div class="section page" id="page1" data-anchor="1st">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/581jwLI73NQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
 			<div class="scroll">
 				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
