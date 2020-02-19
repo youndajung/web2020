@@ -16,14 +16,16 @@
 			});
 			var current=0;
 			$(".right").click(function(){
-				if(current<2){
+				if(current<3){ //=if(current<=2){}
 					current++;
+					if(current==3){current=0};
 				}
 				move();
 			});
 			$(".left").click(function(){
-				if(current>0){
+				if(current>-1){ //=if(current>=0){}
 					current--;
+					if(current==-1){current=2};
 				}
 				move();
 			});

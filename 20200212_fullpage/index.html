@@ -13,7 +13,7 @@
 			position:fixed;
 			z-index: 1;
 			width: 100%;
-			background-color: #cdcdcd;
+			background-color: rgba(0,0,0,.5);
 			padding-left: 10px;
 		}
 		nav#navTop li{float: left;}
@@ -22,6 +22,7 @@
 			line-height: 50px; 
 			text-align: center; 
 			padding: 0 10px;
+			color:#ddd;
 		}
 		#page1{background-image: url(images/bg1.jpg);}
 		#page2{background-image: url(images/bg2.jpg);}
@@ -62,6 +63,16 @@
 		#onView.move{top: 50%; opacity:1;}
 		#onView03{left: 20%; transition:.3s; opacity:0;}
 		#onView03.move{left: 50%; opacity:1;}
+		#myVideo{
+			position: absolute;
+			bottom: 0; top: 0; right: 0;
+			width: 100%; height: 100%;
+			background-size: 100% 100%;
+			background-color: #000;
+			background-position: center center;
+			object-fit:cover;
+			z-index: 3;
+		}
 
 	</style>
 	<script>
@@ -106,7 +117,8 @@
 	</nav>
 	<div id="fullPage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/581jwLI73NQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/581jwLI73NQ?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+			<video id="myVideo" data-autoplay muted autoplay loop><source src="../images/video.mp4" type="video/mp4"></video>
 			<div class="scroll">
 				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
@@ -131,7 +143,29 @@
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
-		<div class="section page" id="page4" data-anchor="4st">4</div>
+		<div class="section page" id="page4" data-anchor="4st">
+			<style>
+				.slide{position: relative;}
+				.slide .sView1,.slide .sView2,.slide .sView3,.slide .sView4{
+					position: absolute; width: 500px; height: 500px; 
+					background-color: rgba(0,0,0,.5); 
+					left: 50%; transform:translate(-50%,-50%);
+					padding-top: 120px;
+				}
+			</style>
+			<div class="slide">
+				<div class="sView1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptas delectus vel libero nisi at, eos dolorem voluptatum assumenda reiciendis quis sunt tenetur possimus praesentium, facilis, similique doloribus quisquam perferendis.</div>
+			</div>
+			<div class="slide">
+				<div class="sView2">Est voluptates consequuntur ab unde dicta fugiat voluptatibus ullam natus, quae eaque sapiente ratione delectus nesciunt. Adipisci quo ad rem voluptatem harum natus totam sapiente, necessitatibus, dolorem officia qui mollitia.</div>
+			</div>
+			<div class="slide">
+				<div class="sView3">Sunt odit animi quas iure ipsa blanditiis neque, quibusdam? Eius, atque error molestiae minus necessitatibus ducimus, dolorem explicabo itaque quidem sequi sit unde aut ipsum eum, autem quisquam harum architecto.</div>
+			</div>
+			<div class="slide">
+				<div class="sView4">Dolorem eaque, minus at consequatur veniam, a temporibus blanditiis dicta facere consequuntur culpa necessitatibus minima praesentium, sequi vero molestias. Amet debitis odio sed architecto praesentium eligendi commodi, minima placeat inventore.</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

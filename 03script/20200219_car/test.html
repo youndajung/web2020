@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>cartest</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jqeury-3.1.1.min.js"></script>
+	<style>
+		#roadWrap{
+			width: 800px; height: 400px; 
+			margin: 0 auto;
+			border: 1px solid #000;
+			position: relative;
+			overflow:hidden;
+		}
+		.road2{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 350px; left: 0;}
+		.road1{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 270px; left: 0;}
+		#car2{position: absolute; top: 280px; left: -120px;}
+		#car1{position: absolute; top: 200px; left: -120px;}
+	</style>
+	<script>
+		$(function(){
+			var objCar=$(".car");
+			var objBar=$(".bar");
+			var nStart= objBar.width().left;
+			var nEnd=nStart+objBar.width()-objCar.width();
+			var nStep=2;
+		});
+	</script>
+</head>
+<body>
+	<div id="roadWrap">
+		<div class="road1"></div>
+		<div id="car1">
+			<img src="../../images/car.png" alt="">
+		</div>
+		<div class="road2"></div>
+		<div id="car2">
+			<img src="../../images/car.png" alt="">
+		</div>
+	</div>
+	<button class=startBtn>GO</button>
+	<button class=stopBtn>STOP</button>
+</body>
+</html>
