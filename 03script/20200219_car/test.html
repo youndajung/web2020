@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>cartest</title>
 	<link rel="stylesheet" href="../../css/reset.css">
-	<script src="../../js/jqeury-3.1.1.min.js"></script>
+	<script src="../../js/jquery-3.1.1.min.js"></script>
 	<style>
 		#roadWrap{
 			width: 800px; height: 400px; 
@@ -14,18 +14,63 @@
 			position: relative;
 			overflow:hidden;
 		}
-		.road2{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 350px; left: 0;}
-		.road1{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 270px; left: 0;}
-		#car2{position: absolute; top: 280px; left: -120px;}
+		.road2{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 350px; left: -120px;}
+		.road1{width: 1040px; height: 30px; margin: 0 auto; background-color: #000; position: absolute; top: 270px; left: -120px;}
+		#car2{
+			position: absolute; top: 280px; right: -120px;
+			transform:rotateY(180deg);
+		}
 		#car1{position: absolute; top: 200px; left: -120px;}
+		.rotate{transform:rotateY(180deg);}
+		.rotate2{transform:rotateY(0)!important;}
 	</style>
 	<script>
 		$(function(){
-			var objCar=$(".car");
-			var objBar=$(".bar");
-			var nStart= objBar.width().left;
-			var nEnd=nStart+objBar.width()-objCar.width();
+			var objCar1=$("#car1");
+			var objCar2=$("#car2");
+			var objRoad1=$(".road1");
+			var nStart= objRoad1.position().left;
+			var nEnd=nStart+objRoad1.width()-objCar1.width();
 			var nStep=2;
+			var nCurrent=nStart;
+			console.log("시작위치 : "+nStart+",종료위치 : "+nEnd);
+			// var nTimerId=0;
+
+			function move(){
+				nCurrent+=nStep;
+				if(nCurrent>nEnd){
+					nStep=-2;
+					objCar1.addClass("rotate");
+					objCar2.addClass("rotate2");
+				}
+				if(nCurrent<nStart){
+					nStep=2;
+					objCar1.removeClass("rotate");
+					objCar2.removeClass("rotate2");
+				}
+
+				objCar1.css("left",nCurrent);
+				objCar2.css("right",nCurrent);
+
+			};
+			setInterval(move,20);
+
+			// function move2(){
+			// 	nCurrent+=nStep;
+			// 	if(nCurrent>nEnd){
+			// 		nStep=-2;
+			// 		objCar2.addClass("rotate2");
+			// 	}
+			// 	if(nCurrent<nStart){
+			// 		nStep=2;
+			// 		objCar2.removeClass("rotate2");
+			// 	}
+
+			// 	objCar2.css("right",nCurrent);
+
+			// };
+			// setInterval(move2,30);
+
 		});
 	</script>
 </head>
@@ -40,7 +85,7 @@
 			<img src="../../images/car.png" alt="">
 		</div>
 	</div>
-	<button class=startBtn>GO</button>
-	<button class=stopBtn>STOP</button>
+	<!-- <button class=startBtn>GO</button>
+	<button class=stopBtn>STOP</button> -->
 </body>
 </html>

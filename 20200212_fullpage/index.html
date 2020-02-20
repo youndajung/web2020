@@ -6,8 +6,10 @@
 	<title>fullpage</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
 	<style>
 		nav#navTop{
 			position:fixed;
@@ -74,6 +76,11 @@
 			z-index: 3;
 		}
 
+		.bx-wrapper {
+		    margin-bottom: 0;
+		}
+	/*	.slider1{padding-top: 50px;}*/
+
 	</style>
 	<script>
 		$(document).ready(function(){
@@ -102,7 +109,20 @@
 					}
 				}
 			});
+			$(window).resize(function(){
+				sHeight();
+			});
 
+			function sHeight(){
+				var sHeight=$(window).height();
+				$(".slider1").height(sHeight);
+				console.log(sHeight)
+			}
+			sHeight();	
+			
+			$(".sliderWrap").bxSlider({
+				pager:false,
+			});
 		});
 	</script>
 </head>
@@ -143,8 +163,9 @@
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
+
 		<div class="section page" id="page4" data-anchor="4st">
-			<style>
+			<!-- <style>
 				.slide{position: relative;}
 				.slide .sView1,.slide .sView2,.slide .sView3,.slide .sView4{
 					position: absolute; width: 500px; height: 500px; 
@@ -164,7 +185,17 @@
 			</div>
 			<div class="slide">
 				<div class="sView4">Dolorem eaque, minus at consequatur veniam, a temporibus blanditiis dicta facere consequuntur culpa necessitatibus minima praesentium, sequi vero molestias. Amet debitis odio sed architecto praesentium eligendi commodi, minima placeat inventore.</div>
+			</div> -->
+			<div class="sliderWrap">
+				<div class="slider1 wiew"><div class="txt" style="position: absolute;top:100px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsam porro at a, provident vel, molestias consequatur, omnis cum quod rerum ea aspernatur sequi, eaque autem nemo distinctio aliquid nesciunt excepturi nobis non! Quibusdam, doloribus magnam voluptates harum molestiae ab, sequi est minima itaque vel laboriosam quae expedita, hic illo.</div></div>
+				<div class="slider1">Ad delectus veritatis est tempore, dignissimos quos, labore obcaecati excepturi doloribus illo eveniet consequuntur consectetur laudantium alias iusto optio culpa asperiores explicabo fugiat totam adipisci suscipit, voluptas rerum! Repudiandae error quia natus nisi aperiam temporibus minus eaque commodi cupiditate, dolorum quod, ea similique molestiae id quibusdam possimus voluptatum? Eos, accusamus!</div>
+				<div class="slider1">Cum cumque voluptates velit distinctio ab quidem cupiditate at optio dolorem praesentium veritatis error corporis obcaecati provident porro, repellat quasi! Nostrum ex minima dolore facilis numquam magni voluptates vero eaque eveniet ipsa, dignissimos doloribus beatae quidem nemo quasi, assumenda laudantium aperiam sit. Quisquam hic ut facere non exercitationem recusandae provident!</div>
+				<div class="slider1">Reiciendis recusandae, soluta nulla quo modi optio ab velit rerum ullam beatae sapiente tempora nisi, placeat aliquid, quisquam at repellendus, eius nobis ipsam vero itaque voluptas facere deleniti similique! Similique odio veritatis, mollitia saepe veniam dolore vel? Eius a earum sapiente, fugiat minima nulla consequatur iure voluptates, sunt eveniet quidem.</div>
+				<div class="slider1">Non exercitationem nihil officiis quos officia, incidunt eligendi, nemo aperiam quam rerum corporis sequi rem distinctio dolorum temporibus atque repellat iste laboriosam quisquam consequuntur recusandae vel ipsa porro quaerat perferendis. Delectus distinctio magni soluta accusantium blanditiis minus iure molestiae, consequatur aliquid quidem. Veniam dolor architecto, perferendis dolores et quo distinctio.</div>
 			</div>
+		</div>
+		<div class="section page fp-auto-height" id="page5" data-anchor="5st">
+			<div class="footer" style="height:300px; background-color: skyblue;"></div>
 		</div>
 	</div>
 </body>
