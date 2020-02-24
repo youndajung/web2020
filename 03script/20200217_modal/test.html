@@ -9,13 +9,17 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script>
 		$("document").ready(function(){
-			$("body").append("<div id='glayLayer'><div id='overLayer'>")
+			$("body").append("<div id='glayLayer'></div><div id='overLayer'><img src='../images/tourgallery_j1a.jpg'></div>")
 			$("a.modal").click(function(){
 				var aHref=$(this).attr("href");
 				console.log(aHref);
-				$("glayLayer").show();
-				$("overLayer").show().html("<img src='"+aHref+"'>")
+				$("#glayLayer").show();
+				$("#overLayer").show().html("<img src='"+aHref+"'>");
 				return false;
+			});
+			$("#glayLayer,#overLayer").click(function(){
+				$("#glayLayer").hide();
+				$("#overLayer").hide();
 			});
 		});
 	</script>

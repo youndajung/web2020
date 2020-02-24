@@ -20,15 +20,19 @@
 					$(".offX").html(childOffset.left);
 				};
 				$(window).resize(function(){
-					size();
+					size();//리사이즈 했을때 위치값 재표현
 				});
-				size();
+				size();//전체 문서가 로드됐을때 위치값 표현
 
 				$(".grow").click(function(){
 					$("#child").width("+=10").height("+=10");
 				});
 				$(".low").click(function(){
 					$("#child").width("-=10").height("-=10");
+				});
+				$(".btn").click(function(e){
+					e.preventDefault();
+					$("html,body").animate({scrollTop:0},300);
 				});
 		});
 	</script>
@@ -42,8 +46,8 @@
 		#child{
 			width: 100px; height: 100px; background-color: yellow; position: absolute; left: 50px;
 		}
-		.btnTop{width: 100px; height: 40px; background-color: black; border-radius:20px;}
-		.btnTop .btn{color:#000; text-align: center; line-height: 40px;}
+		.btnTop{width: 100px; height: 40px; background-color: black; border-radius:20px; position: fixed; bottom: 30px; right: 30px;}
+		.btnTop .btn{display: block; color:#fff; text-align: center; line-height: 40px; right: 0;}
 	</style>
 
 </head>
