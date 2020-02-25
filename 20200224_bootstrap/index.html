@@ -10,10 +10,12 @@
 	<script src="js/bootstrap.bootstrap.min.js"></script>
 	<style>
 		/*.row div{text-align: center;}*/
+		.h100{height: 100px;}
+		.bg-skyblue{background-color: skyblue;}
 	</style>
 </head>
 <body>
-	<div class="container text-center text-white">
+<!-- 	<div class="container text-center text-white">
 		<div class="row bg-primary">
 			<div class="col-sm-6 col-md-4">test4</div>
 			<div class="col-sm-6 col-md-4">test4</div>
@@ -29,6 +31,58 @@
 			<div class="col-md-6">test1</div>
 			<div class="col-md-6">test2</div>
 		</div>
+	</div> -->
+	<div class="bg-skyblue">
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class=" col-sm-3 col-lg-6 bg-success h100">1</div>
+				<div class=" col-sm-3 col-lg-6 bg-danger">2</div>
+				<div class=" col-sm-3 d-lg-none bg-info">3</div>
+				<div class=" col-sm-3 d-lg-none bg-warning">4</div>
+				<div class="col-12 d-sm-none d-lg-none bg-secondary">5</div>
+				<div class="col-12 d-sm-none d-lg-none bg-light">6</div>
+			</div>
+		</div>
 	</div>
+	<div>
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">1</div>
+				<div class="col bg-danger">2</div>
+				<div class="col bg-info">3</div>
+				<div class="col bg-warning">4</div>
+				<div class="col bg-secondary">5</div>
+				<div class="col bg-light">6</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-skyblue">
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">1</div>
+				<div class="col bg-danger">2</div>
+				<div class="col bg-info">3</div>
+				<div class="col bg-warning">4</div>
+				<div class="col bg-secondary">5</div>
+				<div class="col bg-light">6</div>
+			</div>
+		</div>
+	</div>
+	<!-- 1rem=1em=16px/em은 자식에게 부여하면 값이 불어남. /rem은 그대로 고정.
+	(pl/pr/pt/pb-숫자)(ml/mr/mt/mb-숫자)
+	p-0
+	p-1 0.25= 4px(16px기준) 
+	p-2 0.5= 8px(16px기준)
+	p-3 1= 16px(16px기준)
+	p-4 1.5 =24px(16px기준)
+	p-5 3= 48px(16px기준)
+ -->
+ 	<div class="container mt-3">
+ 		<div class="row">
+ 			<button type="button" class="btn btn-lg btn-block btn-outline-primary ">basic</button>
+ 			<button type="button" class="btn btn-sm btn-outline-secondary ml-2">secondary</button>
+ 		</div>
+ 	</div>
+
 </body>
 </html>

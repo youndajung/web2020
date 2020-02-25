@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		// $(function(){
+		// 	$(".menu>a").click(function(){
+		// 	var target=$(this.hash);
+		// 	var tt=target.offset().top;
+		// 	$("html").animate({scrollTop:tt},300);
+
+		// 	});
+		// });
+		// $(function(){
+		// 	$(".menu>a").click(function(){
+		// 		var target=$(this.hash);
+		// 		var tt=target.offset().top;
+		// 		$("html").animate({scrollTop:tt},500);
+		// 	});
+		// });
+		// $(function(){
+		// 	$(".menu>a").click(function(){
+		// 		var target=$(this.hash);
+		// 		var tt=target.offset().top;
+		// 		$("html").animate({scrollTop:tt},500);
+		// 	});
+		// });
+
+		$(function(){
+			$(".menu>a").click(function(){
+				var menu=$(this.hash);
+				var mt=menu.offset().top;
+				$("html").animate({scrollTop:mt},300);
+			});
+
+			var nav=$(".menu>a");
+			var scene=$(".scene");
+
+			// $(window).scroll(function(){
+			// 	var scrollY=$(window).scrollTop();
+				
+			// 	for(var i=0;i<=2;i++){
+			// 		if($(".scene").eq(i).offset().top<=scrollY){
+			// 			$(".menu>a").removeClass("on").eq(i).addClass("on");
+			// 		}
+			// 	};
+			// });
+
+			$(window).scroll(function(){
+				var scrollY=$(window).scrollTop();
+				scene.each(function(){
+					var i=$(this).index()-1;
+					console.log(i);
+
+					if($(this).offset().top<=scrollY){
+						nav.removeClass("on").eq(i).addClass("on");
+					}
+				});
+
+			});
+
+		});
+
+		// $(function(){
+		// 	$(".menu>a").click(function(){
+		// 		var target=$(this.hash);
+		// 		var tt=target.offset().top;
+		// 		$("html").animate({scrollTop:tt},300);
+		// 	});
+		// 	$(window).scroll(function(){
+		// 		var scrollY=$(window).scrollTop();
+		// 		for(var i=0;i<3;i++){
+		// 			if($(".scene").eq(i).offset().top<=scrollY){
+		// 				$(".menu>a").removeClass("on").eq(i).addClass("on");
+		// 			}
+		// 		};
+		// 	});
+		// });
+	</script>
+	<style>
+		html,body{height: 100%;}
+		.scene{
+			width: 100%; height: 100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+		}
+		.scene.one{background-image: url(../../images/pc01.jpg)}
+		.scene.two{background-image: url(../../images/pc02.jpg)}
+		.scene.three{background-image: url(../../images/pc03.jpg)}
+		.scene div{width: 500px; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); color:#fff; text-align: center;}
+		.scene div h1:after{display: block; content:""; margin: 10px; width: 100%; height: 3px; background-color: #fff;}
+
+		.menu{width: 100%; height: 40px; background-color: #000; padding-left: 30px; position: fixed; z-index: 1;}
+		.menu a{display: inline-block; text-align: center; color:#fff; line-height: 40px; padding: 0 20px;}
+		.menu a.on{background-color: gray;}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<a href="#menu1">menu1</a>
+		<a href="#menu2">menu2</a>
+		<a href="#menu3">menu3</a>
+	</div>
+	<section class="scene one" id="menu1">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, porro, veniam! Repellendus doloremque dolorem et nam dolores id ea ipsa?</p>
+		</div>
+	</section>
+	<section class="scene two" id="menu2">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, porro, veniam! Repellendus doloremque dolorem et nam dolores id ea ipsa?</p>
+		</div>
+	</section>
+	<section class="scene three" id="menu3">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, porro, veniam! Repellendus doloremque dolorem et nam dolores id ea ipsa?</p>
+		</div>
+	</section>
+</body>
+</html>
