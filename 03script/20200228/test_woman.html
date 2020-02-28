@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".start").hover(function(){
+				$(".woman").addClass("active");
+				$(".woman.woman1").addClass("move1");
+				$(".woman.woman2").addClass("move2");
+				$(".woman.woman3").addClass("move3");
+				$(".nike").addClass("active");
+			},function(){
+				$(".woman").removeClass("active");
+				$(".woman.woman1").removeClass("move1");
+				$(".woman.woman2").removeClass("move2");
+				$(".woman.woman3").removeClass("move3");
+				$(".nike").removeClass("active");
+			});
+		});
+	</script>
+	<style>
+		body{background-color: orange;}
+		.woman{
+			width: 114px;
+			height: 240px;
+			position: relative; left: 200px;
+			transition:3s;
+			
+		}
+		.woman.active{animation:bounce .8s infinite alternate ;}
+		.woman.active .arm1{animation: aRight .8s infinite linear alternate ; /*alternate는 방향*/}
+		.woman.active .arm2{animation: aLeft .8s infinite linear alternate ; /*alternate는 방향*/}
+		.woman.active .foot1{animation: fRight .8s infinite linear alternate;}
+		.woman.active .foot2{animation: fLeft .8s infinite linear alternate;}
+
+		.woman.move1{left: 500px;}
+		.woman.move2{left: 1200px;}
+		.woman.move3{left: 900px;}
+
+		@keyframes bounce{
+			50%{transform:translateX(10px) translateY(10px);}
+		}
+		.woman >div {position: absolute;}
+		.woman >.body{z-index:2;}
+		.woman >.arm1{
+			top: 100px; left: -20px;
+			transform-origin:80px 20px;/* 애니메이션의 중심축 */
+			transform:rotate(20deg);
+			
+			z-index:3;
+
+		}
+		@keyframes aRight{
+			0%{transform:rotate(20deg);} /*from*/
+			100%{transform:rotate(-40deg);} /*to*/
+		}
+		.woman >.arm2{
+			top: 100px; left: -20px;
+			transform-origin:80px 20px;
+			transform:rotate(-40deg);
+			
+			z-index:1;
+
+		}
+		@keyframes aLeft{
+			0%{transform:rotate(-40deg);} /*from*/
+			100%{transform:rotate(20deg);} /*to*/
+		}
+		.woman >.foot1{
+			top: 200px;
+			transform-origin:35px 40px;
+			transform:rotate(40deg);
+			
+			z-index:1;
+		}
+		@keyframes fRight{
+			0%{transform:rotate(40deg);}
+			100%{transform:rotate(-20deg);}
+		}
+		.woman >.foot2{
+			top: 200px;
+			transform-origin:35px 40px;
+			transform:rotate(-20deg);
+			
+			z-index:1;
+		}
+		@keyframes fLeft{
+			0%{transform:rotate(-20deg);}
+			100%{transform:rotate(40deg);}
+		}
+		.start{
+			width: 100px; height: 100px;
+			background-color: red; color:#fff;
+			text-align: center;
+			font-weight: bold;
+			line-height: 100px;
+			border-radius: 50%;
+		}
+		.nike{
+			width: 500px; 
+			position: absolute; right: 300PX; 
+			z-index: 5; color:#fff; opacity:0; 
+			transition:3s;
+			padding: 10px 50px;
+			background-color: rgba(255,255,255,.1);
+		}
+		.nike.active{opacity:1;}
+		.nike h1{font-size:80px; padding-bottom: 10px;}
+		.nike p{padding-bottom: 30px;}
+
+		.nav{width: 100%; height: 50px; background-color: rgba(0,0,0,.3);}
+		.nav .logo{
+			float: left; 
+			display: inline-block;
+			width: 100px; height: 50px;
+			text-align: center;
+			font-weight: bold;
+			font-size:30px;
+			color:#ddd;
+			margin-left: 100px;
+		}
+		.nav ul{width: 1000px; float: right;}
+		.nav ul li{float: left; width: 20%;}
+		.nav ul li a{width: 100%; display: block; line-height: 50px; text-align: center; color:#ddd;}
+		.nav ul li a:hover{font-weight: bold; background-color: rgba(0,0,0,.3);}
+
+
+	</style>
+</head>
+<body>
+	<div class="nav clearfix">
+		<div class="logo">logo</div>
+		<ul class="clerafix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+	<div class="start">START!</div>
+	<div class="nike">
+		<h1>NIKE RUN</h1>
+		<p>지금 바로 나이키 런에 참여하세요!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi nobis necessitatibus id, perferendis itaque. Nesciunt praesentium eligendi, perferendis alias fuga sapiente iusto, dolor a, nam recusandae amet commodi quis tenetur.</p>
+	</div>
+	<div class="woman woman1">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+	<div class="woman woman2">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+	<div class="woman woman3">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+</body>
+</html>

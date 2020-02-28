@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		body{background-color: orange;}
+		.woman{
+			width: 114px;
+			height: 240px;
+			position: relative; left: 200px;
+			
+		}
+		.woman2{left: 900px;}
+		.woman3{left: 400px;}
+		.woman:hover{animation:bounce .8s infinite alternate ;}
+		.woman:hover .arm1{animation: aRight .8s infinite linear alternate ; /*alternate는 방향*/}
+		.woman:hover .arm2{animation: aLeft .8s infinite linear alternate ; /*alternate는 방향*/}
+		.woman:hover .foot1{animation: fRight .8s infinite linear alternate;}
+		.woman:hover .foot2{animation: fLeft .8s infinite linear alternate;}
+		@keyframes bounce{
+			50%{transform:translateX(10px) translateY(10px);}
+		}
+		.woman >div {position: absolute;}
+		.woman >.body{z-index:2;}
+		.woman >.arm1{
+			top: 100px; left: -20px;
+			transform-origin:80px 20px;/* 애니메이션의 중심축 */
+			transform:rotate(20deg);
+			
+			z-index:3;
+
+		}
+		@keyframes aRight{
+			0%{transform:rotate(20deg);} /*from*/
+			100%{transform:rotate(-40deg);} /*to*/
+		}
+		.woman >.arm2{
+			top: 100px; left: -20px;
+			transform-origin:80px 20px;
+			transform:rotate(-40deg);
+			
+			z-index:1;
+
+		}
+		@keyframes aLeft{
+			0%{transform:rotate(-40deg);} /*from*/
+			100%{transform:rotate(20deg);} /*to*/
+		}
+		.woman >.foot1{
+			top: 200px;
+			transform-origin:35px 40px;
+			transform:rotate(40deg);
+			
+			z-index:1;
+		}
+		@keyframes fRight{
+			0%{transform:rotate(40deg);}
+			100%{transform:rotate(-20deg);}
+		}
+		.woman >.foot2{
+			top: 200px;
+			transform-origin:35px 40px;
+			transform:rotate(-20deg);
+			
+			z-index:1;
+		}
+		@keyframes fLeft{
+			0%{transform:rotate(-20deg);}
+			100%{transform:rotate(40deg);}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="woman">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+	<div class="woman woman2">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+	<div class="woman woman3">
+		<div class="body"><img src="../../images/body01.png" alt=""></div>
+		<div class="arm1"><img src="../../images/arm01.png" alt=""></div>
+		<div class="arm2"><img src="../../images/arm01.png" alt=""></div>
+		<div class="foot1"><img src="../../images/foot01.png" alt=""></div>
+		<div class="foot2"><img src="../../images/foot02.png" alt=""></div>
+	</div>
+</body>
+</html>
