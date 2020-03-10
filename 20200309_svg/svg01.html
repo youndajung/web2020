@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>svg</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{background-color: orange;}
+		.svg{
+			width: 200px; height:200px;
+			background-image: url(circle01.svg);
+			background-color:#f00;
+		}
+	</style>
+</head>
+<body>
+	<img src="circle01.svg" alt="">
+	<div class="svg"></div>
+	<style>
+		.circle01{width: 100px; height: 100px;}
+		#Layer_1 circle{
+			 stroke:#000;
+			 stroke-width:1;
+			 fill:green;
+			 stroke-dasharray:300;
+			 stroke-dashoffset:300; /*초기값*/
+			/*이름 듀레이션*/
+		}
+		@keyframes circleAni{
+			from{stroke-dashoffset:300;}
+			to{stroke-dashoffset:0;}
+		}
+		.circle01:hover circle{
+			animation: circleAni 1s forwards;
+		} 
+		.typeD{width: 200px; height: 200px;}
+		#layerD path{
+			fill:orange;
+			stroke:#000;
+			stroke-width:1;
+			stroke-dasharray:285;
+			stroke-linecap:round;
+			animation:typeD 3s linear infinite alternate;
+		}
+		@keyframes typeD{
+			0%{stroke-dashoffset:285;}
+			50%{ fill:skyblue;}
+			100%{stroke-dashoffset:0; fill:red;}
+		}
+	</style>
+
+
+	<div class="circle01">
+		<svg id="Layer_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 100" >
+		<circle cx="50" cy="50" r="47.113"/>
+	</svg>
+	</div>
+	<div class="typeD">
+		<svg id="layerD" x="0px" y="0px"
+			 width="100%" height="100%" viewBox="0 0 100 100">
+			<g>
+	<path d="M15.726,20.083V7.269h37.068c12.54,0,21.742,4.804,27.609,14.409c4.326,7.114,6.489,16.023,6.489,26.729
+		c0,11.66-2.348,21.487-7.039,29.479C73.766,88.3,64.563,93.505,52.244,93.505H15.726V20.083 M32.995,78.766h17.049
+		c6.526,0,11.402-3.08,14.629-9.239c2.786-5.061,4.18-11.66,4.18-19.799c0-11.292-2.273-19.102-6.819-23.429
+		c-2.934-2.786-7.078-4.18-12.43-4.18H32.995V78.766z"/>
+</g>
+		</svg>
+	</div>
+</body>
+</html>
