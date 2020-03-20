@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array 1차원배열</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		var yoon=["car1","car2","car3"];
+		var text="";
+		$(function(){
+			for(i=0;i<yoon.length;i++){
+				// text+=yoon[i];
+				text+="<li>"+yoon[i]+"</li>";
+				console.log(text);
+			};
+			$(".yoon").append(text);
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="yoon">
+		<ul>
+	</div>
+</body>
+</html>

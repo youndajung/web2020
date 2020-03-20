@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>flex02</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap{
+			width: 1000px; height: 200px;
+			margin: auto;
+			display: flex;
+			align-items:center;
+			background-color: skyblue;
+
+		}
+		.wrap div{
+			flex-grow:1;
+			height: 100px;
+			background-color: gray;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+		}
+		.wrap div:nth-child(2n){background-color: orange;}
+		.wrap .box2{flex-grow:2;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">box01</div>
+		<div class="box2">box02</div>
+		<div class="box3">box03</div>
+		<div class="box4">box04</div>
+		<div class="box5">box05</div>
+	</div>
+</body>
+</html>

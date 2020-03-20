@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>flex layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		html,body{height: 100%;}
+		.wrap{
+			width: 100%;
+			margin: 0 auto;
+			height: 100vh;
+			background-color: skyblue;
+			display:flex;
+			flex-direction:column;/* width값이 필요가없음.flex의 방향=column은 단의형태*/
+		}
+		.header{
+			height: 100px; background-color: orange;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.content{
+			background-color: gray;
+			display:flex;
+			flex-grow:1; /*자기자신에게먹임(자식x)*/
+		}
+		.content .aside{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-grow:2;
+			background-color: #ff0;
+		}
+		.content .main{
+			display:flex; flex-grow:1;
+			justify-content:center;
+			align-items:center;
+			background-color: #00f;
+		}
+		.footer{
+			background-color: #f00;
+			height: 100px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="header">
+			header
+		</header>
+		<div class="content">
+			<div class="aside">aside</div>
+			<div class="main">main</div>
+		</div>
+		<footer class="footer">footer</footer>
+	</div>
+</body>
+</html>
