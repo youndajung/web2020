@@ -1,0 +1,22 @@
+{
+	"book":[
+		{
+			"title":"타인의해석",
+			"author":"말콤 글래드웰",
+			"bookimg":"book01.jpg",
+			"price":"20,000"
+		},
+		{
+			"title":"이상한 수학책",
+			"author":"벤 올린",
+			"bookimg":"book02.jpg",
+			"price":"18,000"
+		}
+		{
+			"title":"나답게 살고 있습니다",
+			"author":"마스다 미리",
+			"bookimg":"book03.jpg",
+			"price":"22,000"
+		}
+	]
+}

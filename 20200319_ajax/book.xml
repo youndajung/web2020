@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<title>타인의 해석</title>
+		<author>말콤 글래드웰</author>
+		<bookimg>book01.jpg</bookimg>
+		<price>20,000</price>
+	</book>
+	<book>
+		<title>이상한 수학책</title>
+		<author>벤 올린</author>
+		<bookimg>book02.jpg</bookimg>
+		<price>18,000</price>
+	</book>
+	<book>
+		<title>나답게 살고 있습니다</title>
+		<author>마스다 미리</author>
+		<bookimg>book03.jpg</bookimg>
+		<price>22,000</price>
+	</book>
+</books>

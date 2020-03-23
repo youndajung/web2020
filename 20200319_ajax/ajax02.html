@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:"book.xml",
+				dataType:"xml",
+				success:function(data){
+					// $(data).find("book").each(function(){});
+					$(data).find("book").each(function(){
+						var title=$("title",this).text();//this안에있는 book에 있는 title을 text 형태로 가져온다
+						var author=$("author",this).text();//this안에있는 book에 있는 author을 text 형태로 가져온다
+						var bookimg=$("bookimg",this).text();//this안에있는 book에 있는 author을 text 형태로 가져온다
+						var price=$("price",this).text();//this안에있는 book에 있는 price를 text 형태로 가져온다
+						var txt="<li>"+title+","+author+","+bookimg+","+price+"</li>";
+						$(".han").append(txt);
+					});
+				}
+			}); //ajax end
+		}); //$ end
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="han"></ul>
+	</div>
+</body>
+</html>
