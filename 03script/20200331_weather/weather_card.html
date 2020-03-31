@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>::날씨카드::</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		li{list-style: none;}
+		a:visited, a:link{text-decoration: none; color: black;}
+		.clearfix:after{content:""; display: block; clear: both;}
+		#weather_wrap{
+			background-image: url(images/weather_bg.jpg);
+			background-position: center;
+			background-size:cover;
+			width: 500px; height: 800px;
+			margin: 50px auto;
+			background-color: rgba(255,255,255,.8);
+			border: 1px solid #ddd;
+			border-radius:30px;
+			position: relative;
+		}
+		.weather_info{
+			width: 480px; height: 780px;
+			padding: 80px 0 100px 0;
+			background-color: rgba(0,0,0,.5);
+			color:#ddd;
+			border: 2px solid #ddd;
+			border-radius:30px;
+			position: absolute;
+			top: 50%; left: 50%;
+			transform:translate(-50%,-50%);
+		}
+		h1{
+			text-align: center;
+			position: absolute;
+			bottom: 80px; left: 50px;
+			
+		}
+		section .w_id,.icon,.temp,.tempWrap,.date,.time{position: absolute;}
+		.w_id{
+			top: 275px; left: 50%;
+			transform:translateX(-50%);
+		}
+		.icon{
+			top:200px; left: 50%;
+			transform:translateX(-50%);
+			width: 80px; height: 80px;
+		}
+		.temp{
+			bottom:30px; left:50%;
+			font-size:4rem;
+			transform:translateX(-50%);
+			width: 150px; height: 150px;
+			border-radius: 100px;
+			line-height: 150px;
+			text-align: center;
+			background-color: rgba(255,255,255,.2);
+		}
+		.tempWrap{bottom: 80px; right: 50px;}
+
+
+		.date{
+			top: 80px; left: 50%;
+			transform:translateX(-50%);
+			font-size:18px;
+		}
+		.time{
+			top: 90px; left: 50%;
+			transform:translateX(-50%);
+			font-size: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div id="weather_wrap">
+		<div class="weather_info">
+			<h1 class="city">SEOUL</h1>
+			<section>
+				<p class="date">date</p>
+				<p class="time">time</p>
+				<p class="w_id">clear</p>
+				<div class="icon">icon</div>
+				<p class="temp">9</p>
+				<div class="tempWrap">
+					<p class="temp_max">최대</p>
+					<p class="temp_min">최소</p>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script>
+		var d = new Date();
+	    var currentDate = d.getFullYear() + "/" + ( d.getMonth() + 1 ) + "/" + d.getDate();
+	    var currentTime = d.getHours() + ":" + d.getMinutes();
+
+
+
+
+		var url = 'http://api.openweathermap.org/data/2.5/weather?q=seoul&APPID=f3a8e91225e135020a80cc63c13c9df6';
+
+		$.getJSON(url,function(data){
+			var sys = data.sys; 			// 국가명, 일출/일몰			
+			var city = data.name; 			// 도시명
+			  			
+			var weather = data.weather; 	// 날씨 객체
+			var wmain = weather[0].main; 	// 구름 상태(Cloudiness)
+			var w_id = weather[0].id; 		// 날씨상태 id 코드
+			var icon = weather[0].icon;		// 날씨 아이콘 정보
+
+			var country = sys.country;  	// 국가명
+
+			var main = data.main;			// 온도 기압 관련 객체
+			var temp = main.temp; 			// 현재 온도
+			var temp_min = main.temp_min 	// 최저 온도
+			var temp_max = main.temp_max 	// 최고 온도
+
+			var icon_url = 'images/' + icon+'.svg';
+
+			$(".date").html(currentDate);
+			$(".time").html(currentTime);
+			$(".city").html(city);
+			$(".icon").html("<img src='"+icon_url+"'>");
+			$(".w_id").html(wmain);
+			$(".temp").html(parseInt(temp-273.15)+"&deg;");
+			$(".temp_max").html(parseInt(temp_max-273.15)+"&deg; max");
+			$(".temp_min").html(parseInt(temp_min-273.15)+"&deg; min");
+		});
+	</script>
+</body>
+</html>
