@@ -165,12 +165,11 @@ _position: relative;
 	height: 75px;
 	background-color: #0099cb;
 	border-bottom: 1px solid #0087bf;
-	_line-height: 75px; color:#fff;
 	padding-top: 25px;
 	padding-left: 10px;
 	display: block;
-
 }
+#section_wrap .container_wrap01>.pagerWrap>div.pager>a:last-child{border-bottom:none;}
 #section_wrap .container_wrap01>.pagerWrap>div.pager>a.active{
 	background-color: #fff;
 	color:#000;

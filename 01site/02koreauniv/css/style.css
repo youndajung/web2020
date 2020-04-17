@@ -27,31 +27,26 @@ header#header div.header_top ul.top_left:nth-child(3).active{}
 
 header#header div.header_top ul.top_right{float: right; _background-color: #f00;}
 header#header div.header_top ul.top_right li{float: left;}
-header#header div.header_top ul.top_right li a{
+header#header div.header_top ul.top_right li >a{
 	color:#f5f6fb;
 	font-size: 12px;
 	text-align: center;
 	margin-right: 10px;
 	line-height: 40px;
 }
-header#header div.header_top ul.top_right li.up a{
-	border:box; 
+.up{margin-right: 5px;}
+.down{margin-right: 10px;}
+.up,
+.down{width: 15px; height: 15px; margin-top: 12px; position: relative;}
+.up a ,
+.down a{
 	background-color: #fff;
-	color:#9b9b9b;
-	font-size: bold;
-	line-height: 40px;
-	padding: 0 3px;
-	margin-right:3px;
+	display: block; width: 100%; height: 100%;
+	position: absolute; 
+	top: 0; left: 0;
+	line-height: 100%;
+	text-align: center;
 }
-header#header div.header_top ul.top_right li.down a{
-	border:box; 
-	background-color: #fff;
-	color:#9b9b9b;
-	font-size: bold;
-	line-height: 40px;
-	padding: 0 5px;
-}
-
 header#header div.header_btm{width: 1200px; margin: 0 auto;}
 header#header div.header_btm h1{
 	float: left; height: 117px;}
