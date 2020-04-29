@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>오늘의 날씨</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		li{list-style: none;}
+		a:visited, a:link{text-decoration: none; color: black;}
+		.clearfix:after{content:""; display: block; clear: both;}
+
+		#weather_info{
+			width: 300px;
+			margin: 0 auto;
+			position: relative;
+			text-align: center;
+		}
+		#weather_info li{
+			background-color: rgba(0,0,0,.8);
+			border-radius: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			color:#ddd;
+			box-shadow:5px 5px 8px #888; /*가로 세로 길이 컬러 */
+		}
+		h1{text-align: center;}
+		.temp{font-size:2rem;}
+		
+	</style>
+</head>
+<body>
+	<div id="weather_info">
+		<ul>
+		</ul>
+	</div>
+
+	<script>
+		var locCity=["seoul","pusan","incheon","jeju"];
+
+		for(i=0;i<locCity.length;i++){
+			console.log(locCity[i]);
+			var url = 'http://api.openweathermap.org/data/2.5/weather?q='+locCity[i]+'&APPID=f3a8e91225e135020a80cc63c13c9df6';
+			view();
+		}
+
+		function view(){
+
+			$.getJSON(url,function(data){
+				var sys = data.sys; 			// 국가명, 일출/일몰			
+				var city = data.name; 			// 도시명
+				  			
+				var weather = data.weather; 	// 날씨 객체
+				var wmain = weather[0].main; 	// 구름 상태(Cloudiness)
+				var w_id = weather[0].id; 		// 날씨상태 id 코드
+				var icon = weather[0].icon;		// 날씨 아이콘 정보
+
+				var country = sys.country;  	// 국가명
+
+				var main = data.main;			// 온도 기압 관련 객체
+				var temp = main.temp; 			// 현재 온도
+				var temp_min = main.temp_min 	// 최저 온도
+				var temp_max = main.temp_max 	// 최고 온도
+
+				var icon_url = 'http://openweathermap.org/img/w/' + icon+'.png';
+
+				var data="";
+				data+="<li>";
+				data+="<h1 class=\"city\">"+city+"</h1>";
+				data+="<div class=\"icon\"><img src=\""+icon_url+"\"></div>";
+				data+="<div class=\"temp\">"+parseInt(temp-273.15)+" &deg; </div>";
+				data+="</li>";
+
+				// data+="</li>";
+				// data+="<h1 class='city'>"+city+"</h1>";
+				// data+="<div class='icon'><img src='"+icon_url+"'></div>";
+				// data+="<div class='temp'>"+parseInt(temp-273.15)+" &deg; </div>";
+				// data+="</li>";
+				$("#weather_info>ul").append(data);
+			});
+		}
+
+	</script>
+</body>
+</html>
