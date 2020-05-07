@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 body{font-family: 'Noto Sans KR', sans-serif;}
 #header{}
 #header div.topWrap{
@@ -7,7 +8,7 @@ background-repeat: no-repeat;
 background-position:center;
 background-size: cover;
 height: 90px;
-_position: relative;
+
 }
 /*header 시작*/
 #header div.top{
@@ -99,6 +100,7 @@ _position: relative;
 }
 /*header끝*/
 /*section시작*/
+section{overflow: hidden;}
 #section_wrap{
 	width: 980px; margin: 0px auto; _height: 1200px;
 	_background-color: #f00; padding-top: 56px;
@@ -123,6 +125,29 @@ _position: relative;
 			from{top: 200px; }
 			to{top: 230px;}
 		}
+.section_bg .airplane_wrap{
+
+	position: absolute;
+	top: 500px; left: -400px;
+	animation-name:myani02;
+	animation-duration:30s;
+	animation-delay:5s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+	_animation-direction:alternate;
+}
+.section_bg .airplane_wrap img{
+	width: 400px;
+}
+@keyframes myani02{
+			0%{top: 500px; left: -400px;transform:rotateY(0deg);}
+			50%{top: 0; left: 120%;transform:rotateY(0deg);}
+			51%{transform:rotateY(180deg);}
+			99%{top: 500px; left: -400px;transform:rotateY(180deg);}
+			100%{top: 500px; left: -400px;transform:rotateY(180deg);}
+
+		}
+
 .section_bg>.text_wrap{
 	position: absolute;
 	top: 100px; right: 25%;
@@ -184,7 +209,13 @@ _position: relative;
 	line-height:30px;
 }
 #section_wrap .container_wrap01>.pagerWrap>div.pager>a>div>.icon{
-	background-image: url(../images/pagerbg01.jpg);
+	background-image: url(../images/pagerbg01.png);
+	background-repeat:no-repeat;
+	width: 30px; height: 30px;
+	text-indent:-9999px;
+}
+#section_wrap .container_wrap01>.pagerWrap>div.pager>a.active>div>.icon{
+	background-image: url(../images/pagerbg02.png);
 	background-repeat:no-repeat;
 	width: 30px; height: 30px;
 	text-indent:-9999px;
@@ -339,7 +370,7 @@ font-size:12px;
 }
 #section_wrap .section_wrap_bottom>ul>li:nth-child(4)> .review{
 	position: absolute;
-	top: 15px; left: 15px;
+	top: 13px; left: 15px;
 	font-size: 14px;
 	color:#595959;
 }
@@ -618,3 +649,14 @@ body.company{
 	background-image: url(../images/bg01.png);
 	background-repeat: repeat;
 }
+
+/*toggle*/
+
+.toggleMenu{display: none;}
+
+
+
+}
+
+
+

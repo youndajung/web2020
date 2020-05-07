@@ -20,10 +20,12 @@
 		$(document).ready(function(){
 			$(".btnWrap>ul>li").click(function(){
 				var liNum=$(this).index();
+				console.log(liNum=0);
 				$(".btnWrap>ul>li").removeClass();
 				$(this).addClass("active");
 				$(".contentWrap>div").hide();
 				$(".contentWrap>div").eq(liNum).show();
+
 			});
 
 		});
@@ -46,6 +48,7 @@
 		<div>5.Iste alias possimus labore facere repellendus. Aspernatur veritatis aperiam dolor iusto qui ipsum, nam, consequuntur asperiores error, eos provident maxime. Rem aliquid eaque suscipit soluta incidunt excepturi eius asperiores sit.</div>
 	</div>
 	</div>
+	
 	
 </body>
 </html>
