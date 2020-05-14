@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=	">
+	<meta charset="UTF-8">
+	<title>text04</title>
+</head>
+<body>
+	<script>	
+		// var sum=0;
+		// for(var i=1; i<=10; i++){
+
+		// 	var left="";
+
+		// 	for(var j=1; j<=i; j++){
+
+		// 		left+=j;
+
+		// 		if(i!=j){left=left+"+"}
+
+		// 		sum+=j;
+		// 	}
+		// 	document.write(left+"="+sum+"<br>");
+		// 	sum=0;
+		// }
+
+		var array=["서울","부산"];
+		// document.write(array[1]+"<br>");
+
+		var object={
+			name:"Nature of Code",
+			cost:30000,
+			author:"다니엘 쉬프만",
+			isbn:"9788968481901",
+			page:620,
+			bill:function(){}
+		}
+		document.write("책이름 : "+object.name+"<br>");
+		document.write("가격 : "+object["cost"]+"원<br>");
+		document.write("저자 : "+object.author+"<br>");
+		document.write("ISBN : "+object["isbn"]+"<br>");
+		document.write("페이지수 : "+object.page+"페이지<br>");
+
+		var avg;
+		var kor;
+		var eng;
+		var math;
+		function calcAverage(a,b,c){
+			avg=(kor+eng+math) / 3;
+			return avg;
+		};
+		kor=80;
+		eng=66;
+		math=76;
+		average= parseInt(calcAverage(kor,eng,math));
+		document.write(average);
+	</script>
+</body>
+</html>
