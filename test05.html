@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>test05</title>
+</head>
+<body>
+	<script>
+		var deg=[15,20,25,30,40];
+
+		function printAvg(){
+			var sum=0;
+			var n=deg.length;
+			for(var i=0;i<n;i++){
+				sum+=deg[i];
+
+			}
+			return (sum/n);
+		}
+		var getAvg=printAvg();
+		document.write("평균온도는"+getAvg+"도 입니다.");
+	</script>
+</body>
+</html>
